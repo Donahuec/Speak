@@ -1,0 +1,71 @@
+{
+  "settings": {
+    "sceneWidth": 1920,
+    "sceneHeight": 1080,
+    "generateOnSave": true,
+    "enableStepping": true,
+    "stepWidth": 100,
+    "stepHeight": 100
+  },
+  "world": {
+    "type": "group",
+    "id": "80cd3013-6993-4785-b9e6-2994117c5b78",
+    "info": {
+      "editorName": "startCanvas",
+      "children": [
+        {
+          "type": "image",
+          "id": "8e65fefe-080d-475c-80c0-44564fc8ce28",
+          "asset": "0",
+          "info": {"editorName": "startBackground"}
+        },
+        {
+          "type": "button",
+          "id": "25ce2168-9198-4dc5-8313-b78626c09729",
+          "asset": "1",
+          "info": {
+            "editorName": "optionsButton",
+            "editorPublic": true,
+            "x": 1500,
+            "y": 100,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5
+          }
+        },
+        {
+          "type": "button",
+          "id": "5acd6207-d3a8-4dda-b4eb-3e4b6d4fad9e",
+          "asset": "2",
+          "info": {
+            "editorName": "startButton",
+            "editorPublic": true,
+            "x": 400,
+            "y": 100,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5,
+            "callback": "startGame"
+          }
+        }
+      ]
+    }
+  },
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "start",
+      "asset": "startBackground"
+    },
+    "1": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "start",
+      "asset": "startAtlas",
+      "sprite": "options"
+    },
+    "2": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "start",
+      "asset": "startAtlas",
+      "sprite": "start"
+    }
+  }
+}

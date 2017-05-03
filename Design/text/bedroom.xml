@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<textObject>
+    <item id="bedroom">
+        <text>Your bedroom. Though the warmth of your sheets is tempting, you should probably get ready for work.</text>
+    </item>
+    <item id="door">
+        <text>Go to the living room.</text>
+    </item>
+
+
+</textObject>

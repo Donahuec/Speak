@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<textObject>
+    <item id="continue">
+        <text>Continue</text>
+    </item>
+    <item id="sitDownDesc">
+        <text>You sit down in an empty seat. A moment later the bus rumbles and starts moving forward. No one sat next to you at this stop. You sigh in relief.</text>
+    </item>
+    <item id="secondStopDesc">
+        <text>The bus comes to a second stop, and more people start filing onto the already cramped bus. A young woman sits down next to you. "Is it alright if I sit here?" she asks politely.</text>
+    </item>
+    <item id="yes">
+        <text>Yes, that's alright</text>
+    </item>
+    <item id ="yesDesc">
+        <text>Let her sit next to you. You really don't want to, but you know anything else would be rude. There are no other free seats on the bus.</text>
+    </item>
+    <item id="no">
+        <text>No, this seat is taken</text>
+    </item>
+    <item id="noDesc">
+        <text>Tell her the seat is taken. She would have to stand then. You feel like everyone on the bus will see this.</text>
+    </item>
+    <item id="leave">
+        <text>Get off the Bus</text>
+    </item>
+    <item id="leaveDesc">
+        <text>Tell her that this is your stop anyway, and hurry off of the bus. You can walk the rest of the way to work. (20 minutes)</text>
+    </item>
+    <item id="yesRes">
+        <text>She smiles and says "Thanks!" You nod politely and turn to stare out the window. The rest of the bus ride passes uneventfully.</text>
+    </item>
+    <item id="yesResPanic">
+        <text>She smiles and says "Thanks!" You nod quickly and turn to stare out the window. You can feel her next to you the whole time, and your hands are sweating. The rest of the bus ride seems to take forever.</text>
+    </item>
+    <item id="noRes">
+        <text>"Oh, alright," she says, and stands up. She moves over to stand and hold one of the standing bars. You know that you are overreacting, but it feels like everyone on the bus is judging you now. You can feel the weight of it on your shoulders.</text>
+    </item>
+    <item id="noResPanic">
+        <text>"Oh, alright," she says and stands up. You sigh in relief and close your eyes. The rest of the ride goes smoothly. </text>
+    </item>
+    <item id="leaveRes">
+        <text>"This is my stop anyway, so go ahead" you say. You stand up, carefully step around her and rush off the bus. You probably panicked, and staying on the bus would be fine, but at least you like walking.</text>
+    </item>
+    <item id="panicRes">
+        <text>You stare at her wide eyed for a moment. "S-Sure" you mutter. A brief look of concern passes over her face, but she suppresses it, and says "Thanks!" with a smile. She sits down next to you, and you spend the rest of the bus ride trying to hide that you're shaking.</text>
+    </item>
+</textObject>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<textObject>
+    <item id="roomDesc">
+        <text>Your living room. </text>
+    </item>
+    <item id="bedroom">
+        <text>Go to your bedroom.</text>
+    </item>
+    <item id="hallway">
+        <text>A hallway to your kitchen and the exit.</text>
+    </item>
+    <item id="hallChoice">
+        <text>You can go to your kitchen to get breakfast or leave for work. </text>
+    </item>
+    <item id="kitchen">
+        <text>go to the Kitchen</text>
+    </item>
+    <item id="kitchenDesc">
+        <text>Head to your kitchen and make sure you eat a good breakfast.</text>
+    </item>
+    <item id="bus">
+        <text>take the Bus to work.</text>
+    </item>
+    <item id="busDesc">
+        <text>you hate taking the bus. It always stresses you out, but it is much faster, and you can't be late to work. (20 minutes)</text>
+    </item>
+    <item id="walk">
+        <text>Walk to work</text>
+    </item>
+    <item id="walkDesc">
+        <text>Walk to work. This is significantly less stressful than the bus, but takes much longer. (50 minutes)</text>
+    </item>
+</textObject>

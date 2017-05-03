@@ -1,0 +1,49 @@
+{
+  "frames": {
+    "options": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 4,
+        "w": 456,
+        "h": 80
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 456,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 456,
+        "h": 80
+      }
+    },
+    "start": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 460,
+        "y": 2,
+        "w": 309,
+        "h": 82
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 309,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 309,
+        "h": 82
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "startAtlas.png"
+  }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<textObject>
+    <item id="snooze">
+        <text>Snooze The Alarm</text>
+    </item>
+    <item id="up">
+        <text>Get Up</text>
+    </item>
+    <item id="alarmDesc">
+        <text>You open your eyes slowly. Your alarm is blaring. You have work at 9:00. You blink a few times, trying to clear the fog of sleep from your brain. The nightmares are still lingering. You should get up so you can eat breakfast, and then get to work. If you sleep too late you'll have to take the bus, which is always an unpleasant experience, but sleep is tugging on your brain...</text>
+    </item>
+    <item id="upDesc">
+        <text>Get out of bed, shower, and get dressed.(30 minutes)</text>
+    </item>
+    <item id="snoozeDesc">
+        <text>Snooze your alarm. It takes 50 minutes to walk to work, and 20 to ride the bus, given you don't run into any obstacles today. You should definitely eat breakfast before work today, you can feel your stomach growling... but if you could just sleep for a few more minutes maybe you'll feel a bit more rested... (15 minutes)</text>
+    </item>
+    <item id="timeout">
+        <text>You really need to get up, or you will miss work.</text>
+    </item>
+</textObject>

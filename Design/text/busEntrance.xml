@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<textObject>
+    <item id="mainDesc">
+        <text> The bus door wheezes as it opens. You hesitate as you enter. The bus is pretty full today. You spot an empty section a few rows down, but the likely hood that someone will sit next to you is high. </text>
+    </item>
+    <item id="pay">
+        <text>Pay the bus toll and sit down</text>
+    </item>
+    <item id ="wait">
+        <text>Wait for the next bus (10 minutes)</text>
+    </item>
+    <item id ="walk">
+        <text>Walk to work instead</text>
+    </item>
+    <item id="continue">
+        <text>Continue</text>
+    </item>
+    <item id ="panic">
+        <text>You panic. Your hands begin to sweat. The bus driver glances at you, an annoyed look on his face. "Well, are you getting on?" he grumbles at you. You nod quickly, and pay the toll before stumbling to you seat. you can feel yourself shaking. </text>
+    </item>
+    <item id = "didWait">
+        <text>You wait for the next bus. It takes 10 minutes for the bus to ride, then another 20 to get to work. The bus ride is uneventful.
+        </text>
+    </item>
+</textObject>

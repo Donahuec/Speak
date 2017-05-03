@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<textObject>
+    <item id="roomDesc">
+        <text>Your Kitchen. </text>
+    </item>
+    <item id="door">
+        <text>Return to the living room, or leave your apartment.</text>
+    </item>
+    <item id="livingroom">
+        <text>Return to the living room. </text>
+    </item>
+    <item id="livingroomDesc">
+        <text>Go back to the living room. </text>
+    </item>
+    <item id="bus">
+        <text>take the Bus to work.</text>
+    </item>
+    <item id="busDesc">
+        <text>you hate taking the bus. It always stresses you out, but it is much faster, and you can't be late to work. (20 minutes)</text>
+    </item>
+    <item id="walk">
+        <text>Walk to work</text>
+    </item>
+    <item id="walkDesc">
+        <text>Walk to work. This is significantly less stressful than the bus, but takes much longer. (50 minutes)</text>
+    </item>
+    <item id="fridge">
+        <text>Look in the fridge for something to eat.</text>
+    </item>
+    <item>
+        <text>You open up the fridge. You have a few options to choose from, and you know that eating well now will be a good start to your day.</text>
+    </item>
+    <item id="small">
+        <text>Grab some fruit</text>
+    </item>
+    <item id="smallDesc">
+        <text>Grab some fruit for breakfast. It's fast and easy, but you'll probably be hungry later.</text>
+    </item>
+    <item id="medium">
+        <text>Make a sandwich</text>
+    </item>
+    <item id="mediumDesc">
+        <text>Sit down for a peanut butter sandwich and toast. Maybe you'll have a glass of milk with that. (10 minutes)</text>
+    </item>
+    <item id="large">
+        <text>Cook a nice breakfast</text>
+    </item>
+    <item id="largeDesc">
+        <text>If you've got the time, why not make a big breakfast? Pancakes, eggs, maybe some bacon? You can feel your mouth watering already, and it will definitely leave you feeling great. (30 minutes)</text>
+    </item>
+</textObject>

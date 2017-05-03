@@ -1,0 +1,47 @@
+{
+    "level": [{
+        "type": "image",
+        "key": "mono",
+        "url": "assets/images/mono.png",
+        "overwrite": false
+    }],
+    "start": [
+        {
+            "type": "image",
+            "key": "tap-to-start",
+            "url": "assets/images/tap-to-start.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "key": "startBackground",
+            "url": "assets/images/start/cover.png",
+            "overwrite": false
+        },
+        {
+            "type": "atlas",
+            "key": "startAtlas",
+            "textureURL": "assets/images/start/startAtlas.png",
+            "atlasURL": "assets/images/start/startAtlas.json",
+            "format": "TEXTURE_ATLAS_JSON_HASH"
+        },
+        {
+            "type": "script",
+            "key": "startCanvas",
+            "url": "js/scenes/start/startCanvas.js"
+        }
+    ],
+    "preload": [{
+        "type": "image",
+        "key": "loading",
+        "url": "assets/images/loading.png",
+        "overwrite": false
+    }],
+    "meta": {
+        "generated": "1493773815751",
+        "app": "Phaser Editor",
+        "url": "http://phasereditor.boniatillo.com",
+        "version": "1.0",
+        "copyright": "Arian Fornaris (c) 2015,2016"
+    }
+}
