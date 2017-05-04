@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Caitlin\Documents\cs\Speak"/>
+	</list>
 	<list key="installedFeatures">
 		<item value="org.eclipse.egit:4.7.0.201704051617-r"/>
 		<item value="org.eclipse.emf.common:2.12.0.v20160420-0247"/>

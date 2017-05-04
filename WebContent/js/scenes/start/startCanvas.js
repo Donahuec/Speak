@@ -44,22 +44,37 @@ startCanvas.prototype.constructor = Phaser.Group;
 
 /* --- end generated code --- */
 
+/*
+ * Handles Hovering over the Start Button
+ */
 function startHover() {
 	this.fStartButton.scale.setTo(1.25, 1.25);
 }
 
+/*
+ * Resets the start button after leaving it
+ */
 function startOut() {
 	this.fStartButton.scale.setTo(1, 1);	
 }
 
+/*
+ * Handles Hovering over the Options Button
+ */
 function optionsHover() {
 	this.fOptionsButton.scale.setTo(1.25, 1.25);
 }
 
+/*
+ * Resets the options button after leaving it
+ */
 function optionsOut() {
 	this.fOptionsButton.scale.setTo(1, 1);	
 }
 
+/*
+ * Starts the game when clicking the start button.
+ */
 function startGame() {
 	this.game.state.start("Level");
 }
