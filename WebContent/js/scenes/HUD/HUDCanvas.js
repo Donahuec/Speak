@@ -14,9 +14,9 @@ function HUDCanvas(aGame, aParent) {
 
 	/* --- pre-init-end --- */
 
-	this.game.add.sprite(0, -55, 'HUDAtlas', 'header', this);
+	this.game.add.sprite(0, -129, 'HUDAtlas', 'header', this);
 
-	this.game.add.sprite(0, 780, 'HUDAtlas', 'footer', this);
+	this.game.add.sprite(0, 797, 'HUDAtlas', 'footer', this);
 
 	this.game.add.sprite(111, 10, 'HUDAtlas', 'leftBarEnd', this);
 

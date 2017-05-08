@@ -3,7 +3,7 @@
     "sceneWidth": 1920,
     "sceneHeight": 1080,
     "generateOnSave": true,
-    "enableStepping": false,
+    "enableStepping": true,
     "stepWidth": 100,
     "stepHeight": 1
   },
@@ -19,7 +19,7 @@
           "asset": "0",
           "info": {
             "editorName": "header",
-            "y": -55
+            "y": -129
           }
         },
         {
@@ -28,7 +28,7 @@
           "asset": "1",
           "info": {
             "editorName": "footer",
-            "y": 780
+            "y": 797
           }
         },
         {
