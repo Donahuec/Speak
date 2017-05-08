@@ -37,8 +37,35 @@
         "url": "assets/images/loading.png",
         "overwrite": false
     }],
+    "HUD": [
+        {
+            "type": "atlas",
+            "key": "HUDAtlas",
+            "textureURL": "assets/images/HUD/HUDAtlas.png",
+            "atlasURL": "assets/images/HUD/HUDAtlas.json",
+            "format": "TEXTURE_ATLAS_JSON_HASH"
+        },
+        {
+            "type": "script",
+            "key": "HUDCanvas",
+            "url": "js/scenes/HUD/HUDCanvas.js"
+        }
+    ],
+    "alarm": [
+        {
+            "type": "image",
+            "key": "alarm_bg",
+            "url": "assets/images/alarm/alarm_bg.png",
+            "overwrite": false
+        },
+        {
+            "type": "script",
+            "key": "alarmCanvas",
+            "url": "js/scenes/alarm/alarmCanvas.js"
+        }
+    ],
     "meta": {
-        "generated": "1493773815751",
+        "generated": "1494221949598",
         "app": "Phaser Editor",
         "url": "http://phasereditor.boniatillo.com",
         "version": "1.0",

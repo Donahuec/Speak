@@ -76,6 +76,6 @@ function optionsOut() {
  * Starts the game when clicking the start button.
  */
 function startGame() {
-	this.game.state.start("Level");
+	this.game.state.start("Alarm");
 }
 

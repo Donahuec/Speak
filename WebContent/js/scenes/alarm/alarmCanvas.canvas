@@ -1,0 +1,26 @@
+{
+  "settings": {
+    "sceneWidth": 1920,
+    "sceneHeight": 1080,
+    "generateOnSave": true,
+    "enableStepping": true
+  },
+  "world": {
+    "type": "group",
+    "id": "44109e30-5722-4f80-bc25-238341326fe0",
+    "info": {
+      "editorName": "alarmCanvas",
+      "children": [{
+        "type": "image",
+        "id": "a1e1ad0f-3538-423e-a689-77eb5b348a4e",
+        "asset": "0",
+        "info": {"editorName": "alarm_bg"}
+      }]
+    }
+  },
+  "asset-table": {"0": {
+    "file": "WebContent/assets/assets-pack.json",
+    "section": "alarm",
+    "asset": "alarm_bg"
+  }}
+}

@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+@font-face {	
+	font-family: 'LCD';
+	src: url('assets/fonts/LCDMN.TTF') format('truetype');
+	}
+	
+.fontLoader {
+   position: absolute;
+   left: -1000px;
+   visibility: hidden;
+}

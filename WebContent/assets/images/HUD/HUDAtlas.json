@@ -1,0 +1,129 @@
+{
+  "frames": {
+    "barFill": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 1924,
+        "y": 604,
+        "w": 1,
+        "h": 15
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 1,
+        "h": 15
+      }
+    },
+    "barMiddle": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 1924,
+        "y": 621,
+        "w": 1,
+        "h": 19
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 1,
+        "h": 19
+      }
+    },
+    "footer": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 276,
+        "w": 1920,
+        "h": 406
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 406
+      },
+      "sourceSize": {
+        "w": 1920,
+        "h": 446
+      }
+    },
+    "header": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 1920,
+        "h": 272
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 15,
+        "w": 1920,
+        "h": 272
+      },
+      "sourceSize": {
+        "w": 1920,
+        "h": 308
+      }
+    },
+    "leftBarEnd": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 1924,
+        "y": 663,
+        "w": 10,
+        "h": 19
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 10,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 10,
+        "h": 19
+      }
+    },
+    "rightBarEnd": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 1924,
+        "y": 642,
+        "w": 10,
+        "h": 19
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 10,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 10,
+        "h": 19
+      }
+    }
+  },
+  "meta": {
+    "app": "Phaser Editor",
+    "version": "1",
+    "image": "HUDAtlas.png"
+  }
+}

@@ -1,7 +1,5 @@
 {
   "files": [
-    "/Speak/Design/images/start/options.png",
-    "/Speak/Design/images/start/start.png",
     "/Speak/Design/images/HUD/barFill.png",
     "/Speak/Design/images/HUD/barMiddle.png",
     "/Speak/Design/images/HUD/footer.png",
@@ -18,8 +16,8 @@
     "rotation": false,
     "minWidth": 16,
     "minHeight": 16,
-    "maxWidth": 1920,
-    "maxHeight": 1024,
+    "maxWidth": 2000,
+    "maxHeight": 2000,
     "square": false,
     "stripWhitespaceX": true,
     "stripWhitespaceY": true,

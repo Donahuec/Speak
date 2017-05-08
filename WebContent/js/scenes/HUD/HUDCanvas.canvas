@@ -1,0 +1,169 @@
+{
+  "settings": {
+    "sceneWidth": 1920,
+    "sceneHeight": 1080,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "stepWidth": 100,
+    "stepHeight": 1
+  },
+  "world": {
+    "type": "group",
+    "id": "9615a169-fcac-4906-8056-ce2769196448",
+    "info": {
+      "editorName": "HUDCanvas",
+      "children": [
+        {
+          "type": "atlas-sprite",
+          "id": "8750ca64-6ae3-431a-b856-ac44877730e6",
+          "asset": "0",
+          "info": {
+            "editorName": "header",
+            "y": -55
+          }
+        },
+        {
+          "type": "atlas-sprite",
+          "id": "6ebce243-1d46-478f-902f-9331b064d3e4",
+          "asset": "1",
+          "info": {
+            "editorName": "footer",
+            "y": 780
+          }
+        },
+        {
+          "type": "atlas-sprite",
+          "id": "7882fb2c-ca3c-48fc-8b3c-cb7ef44736c4",
+          "asset": "2",
+          "info": {
+            "editorName": "anxietyBarLeft",
+            "x": 111,
+            "y": 10
+          }
+        },
+        {
+          "type": "tileSprite",
+          "id": "8eae1d32-2acb-4e2b-9ee0-90e07410dbb7",
+          "asset": "3",
+          "info": {
+            "editorName": "anxietyBarMiddle",
+            "x": 120,
+            "y": 10,
+            "scale.x": 221.07512928627278,
+            "width": 7,
+            "height": 19
+          }
+        },
+        {
+          "type": "atlas-sprite",
+          "id": "49055021-8b00-4635-a470-1d07edf5256e",
+          "asset": "4",
+          "info": {
+            "editorName": "anxietyBarRight",
+            "x": 1667,
+            "y": 10
+          }
+        },
+        {
+          "type": "tileSprite",
+          "id": "9911b5fa-5b14-42fb-a48f-269a2415d02b",
+          "asset": "5",
+          "info": {
+            "editorName": "anxietyFill",
+            "editorPublic": true,
+            "x": 119,
+            "y": 12,
+            "scale.x": 60.69777847539599,
+            "width": 4,
+            "height": 15
+          }
+        },
+        {
+          "type": "atlas-sprite",
+          "id": "557518e8-f84a-485c-8146-d7748454b183",
+          "asset": "2",
+          "info": {
+            "editorName": "stressBarLeft",
+            "x": 111,
+            "y": 41
+          }
+        },
+        {
+          "type": "tileSprite",
+          "id": "9f9adcb1-e232-4a8d-8c68-32d127154c61",
+          "asset": "3",
+          "info": {
+            "editorName": "stressBarMiddle",
+            "x": 120,
+            "y": 41,
+            "scale.x": 117.94871248565869,
+            "width": 7,
+            "height": 19
+          }
+        },
+        {
+          "type": "atlas-sprite",
+          "id": "827ecf08-6f7f-4ad9-84d4-0be56a6260d6",
+          "asset": "4",
+          "info": {
+            "editorName": "stressBarRight",
+            "x": 945,
+            "y": 41
+          }
+        },
+        {
+          "type": "tileSprite",
+          "id": "0ec5aea0-607c-4c70-9b62-9b107f464689",
+          "asset": "5",
+          "info": {
+            "editorName": "stressFill",
+            "editorPublic": true,
+            "x": 119,
+            "y": 43,
+            "scale.x": 60.69777847539599,
+            "width": 4,
+            "height": 15
+          }
+        }
+      ]
+    }
+  },
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "HUD",
+      "asset": "HUDAtlas",
+      "sprite": "header"
+    },
+    "1": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "HUD",
+      "asset": "HUDAtlas",
+      "sprite": "footer"
+    },
+    "2": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "HUD",
+      "asset": "HUDAtlas",
+      "sprite": "leftBarEnd"
+    },
+    "3": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "HUD",
+      "asset": "HUDAtlas",
+      "sprite": "barMiddle"
+    },
+    "4": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "HUD",
+      "asset": "HUDAtlas",
+      "sprite": "rightBarEnd"
+    },
+    "5": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "HUD",
+      "asset": "HUDAtlas",
+      "sprite": "barFill"
+    }
+  }
+}
