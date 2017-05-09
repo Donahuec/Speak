@@ -31,12 +31,24 @@
             "url": "js/scenes/start/startCanvas.js"
         }
     ],
-    "preload": [{
-        "type": "image",
-        "key": "loading",
-        "url": "assets/images/loading.png",
-        "overwrite": false
-    }],
+    "preload": [
+        {
+            "type": "image",
+            "key": "loading",
+            "url": "assets/images/loading.png",
+            "overwrite": false
+        },
+        {
+            "type": "script",
+            "key": "Start",
+            "url": "js/scenes/start/Start.js"
+        },
+        {
+            "type": "script",
+            "key": "Alarm",
+            "url": "js/scenes/alarm/Alarm.js"
+        }
+    ],
     "HUD": [
         {
             "type": "atlas",
@@ -65,7 +77,7 @@
         }
     ],
     "meta": {
-        "generated": "1494221949598",
+        "generated": "1494303735437",
         "app": "Phaser Editor",
         "url": "http://phasereditor.boniatillo.com",
         "version": "1.0",

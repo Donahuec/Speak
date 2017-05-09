@@ -17,6 +17,9 @@ Preload.prototype.preload = function() {
 			"loading");
 	preloadBar.anchor.set(0.5, 0.5);
 	this.load.setPreloadSprite(preloadBar);
+	
+	this.game.state.add("Start", Start);
+	this.game.state.add("Alarm", Alarm);
 
 	// Here we load the rest of the assets our game needs.
 	this.load.pack("start", "assets/assets-pack.json");

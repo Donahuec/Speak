@@ -9,8 +9,8 @@ window.onload = function() {
 	
 	game.state.add("Preload", Preload);
 	
-	game.state.add("Start", Start);
-	game.state.add("Alarm", Alarm);
+	//game.state.add("Start", Start);
+	//game.state.add("Alarm", Alarm);
 
 	// Now start the Boot state.
 	game.state.start("Boot");
