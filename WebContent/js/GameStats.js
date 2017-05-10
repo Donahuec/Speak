@@ -6,6 +6,13 @@ var START_HOUR = 7;
 var START_MINUTE = 20;
 var AM = "AM";
 var PM = "PM";
+var NO_BREAKFAST = 0;
+var SMALL_BREAKFAST = 1;
+var MEDIUM_BREAKFAST = 2;
+var LARGE_BREAKFAST = 3;
+var PAST = -1;
+var CURRENT = 0;
+var FUTURE = 1;
 
 
 function GameStats() {
@@ -18,12 +25,13 @@ function GameStats() {
     		minute : START_MINUTE, 
     		am : ""
     };
-    var twelveHourClock = true;
     
-    var breakfastType;
+    var twelveHourClock = false;
+    
+    this.breakfastType = NO_BREAKFAST;
     
     this.getTime = function() {
-    	if (twelveHourClock) {
+    	if (!twelveHourClock) {
     		var newTime = {minute : time.minute};
     		
     		if (time.hour <= 12) {
@@ -55,14 +63,33 @@ function GameStats() {
     	var hour;
     	var minute;
     	
-    	if (curTime.hour < 10) hour = "0" + curTime.hour;
+    	if (!twelveHourClock) hour = curTime.hour % 12;
     	else hour = curTime.hour;
+    	minute = curTime.minute;
     	
-
+    	if (hour < 10) hour = "0" + hour;
+    	if (minute < 10) minute = "0" + minute;
+    	else minute = curTime.minute;
+    		
+    	return hour + ":" + minute + " " +  curTime.am;
     };
     
-	 
-	
+    this.setTwelveHourClock= function(setTo) {
+    	twelveHourClock = setTo;
+    };
+    
+    
+    this.timeCompare = function(hour, minute) {
+    	if (hour < time.hour) return PAST;
+    	else if (hour > time.hour) return FUTURE;
+    	else if (hour === time.hour && minute < time.minute) return PAST;
+    	else if (hour === time.hour && minute > time.minute) return FUTURE;
+    	else return CURRENT;
+    };
+
 }
 
 var gameVariables = new GameStats();
+
+
+

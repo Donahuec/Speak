@@ -5,6 +5,7 @@ function Preload() {
 	Phaser.State.call(this);
 }
 
+
 /** @type Phaser.State */
 var proto = Object.create(Phaser.State);
 Preload.prototype = proto;
