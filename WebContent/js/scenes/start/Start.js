@@ -14,7 +14,3 @@ Start.prototype = proto;
 Start.prototype.create = function() {
 	this.scene = new startCanvas(this.game);
 };
-
-Start.prototype.startGame = function() {
-	this.game.state.start("Alarm");
-};

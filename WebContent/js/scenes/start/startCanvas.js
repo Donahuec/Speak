@@ -77,5 +77,6 @@ function optionsOut() {
  */
 function startGame() {
 	this.game.state.start("Alarm");
+	
 }
 

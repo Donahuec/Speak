@@ -47,6 +47,11 @@
             "type": "script",
             "key": "Alarm",
             "url": "js/scenes/alarm/Alarm.js"
+        },
+        {
+            "type": "script",
+            "key": "GameOver",
+            "url": "js/scenes/gameOver/GameOver.js"
         }
     ],
     "HUD": [
@@ -76,8 +81,21 @@
             "url": "js/scenes/alarm/alarmCanvas.js"
         }
     ],
+    "gameOver": [
+        {
+            "type": "image",
+            "key": "gameOverBackground",
+            "url": "assets/images/gameOver/gameOverBG.png",
+            "overwrite": false
+        },
+        {
+            "type": "script",
+            "key": "GameOverCanvas",
+            "url": "js/scenes/gameOver/GameOverCanvas.js"
+        }
+    ],
     "meta": {
-        "generated": "1494389418937",
+        "generated": "1494397936944",
         "app": "Phaser Editor",
         "url": "http://phasereditor.boniatillo.com",
         "version": "1.0",

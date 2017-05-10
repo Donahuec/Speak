@@ -1,0 +1,69 @@
+{
+  "settings": {
+    "sceneWidth": 1920,
+    "sceneHeight": 1080,
+    "generateOnSave": true,
+    "enableStepping": true
+  },
+  "world": {
+    "type": "group",
+    "id": "ac4aa8a0-6040-4fcf-9bfb-92090b23a4dd",
+    "info": {
+      "editorName": "GameOverCanvas",
+      "children": [
+        {
+          "type": "image",
+          "id": "cc5d5ae1-98a3-4899-bb90-7a5c7f61fa02",
+          "asset": "0",
+          "info": {"editorName": "gameOverBackground"}
+        },
+        {
+          "type": "button",
+          "id": "4e34680c-d083-494a-a3b2-ecac57529485",
+          "asset": "1",
+          "info": {
+            "editorName": "restartButton",
+            "editorPublic": true,
+            "x": 448,
+            "y": 896,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5,
+            "callback": "restartGame"
+          }
+        },
+        {
+          "type": "button",
+          "id": "5b3cc832-a420-4ca5-ad29-cb273debb7c1",
+          "asset": "2",
+          "info": {
+            "editorName": "learnButton",
+            "editorPublic": true,
+            "x": 1472,
+            "y": 896,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5
+          }
+        }
+      ]
+    }
+  },
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "gameOver",
+      "asset": "gameOverBackground"
+    },
+    "1": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "start",
+      "asset": "startAtlas",
+      "sprite": "restartButton"
+    },
+    "2": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "start",
+      "asset": "startAtlas",
+      "sprite": "learnButton"
+    }
+  }
+}

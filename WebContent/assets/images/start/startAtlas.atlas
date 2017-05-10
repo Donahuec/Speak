@@ -1,13 +1,9 @@
 {
   "files": [
-    "/Speak/Design/images/start/options.png",
+    "/Speak/WebContent/assets/images/gameOver/learnButton.png",
+    "/Speak/WebContent/assets/images/gameOver/restartButton.png",
     "/Speak/Design/images/start/start.png",
-    "/Speak/Design/images/HUD/barFill.png",
-    "/Speak/Design/images/HUD/barMiddle.png",
-    "/Speak/Design/images/HUD/footer.png",
-    "/Speak/Design/images/HUD/header.png",
-    "/Speak/Design/images/HUD/leftBarEnd.png",
-    "/Speak/Design/images/HUD/rightBarEnd.png"
+    "/Speak/Design/images/start/options.png"
   ],
   "settings": {
     "pot": false,
@@ -18,7 +14,7 @@
     "rotation": false,
     "minWidth": 16,
     "minHeight": 16,
-    "maxWidth": 1920,
+    "maxWidth": 1024,
     "maxHeight": 1024,
     "square": false,
     "stripWhitespaceX": true,
