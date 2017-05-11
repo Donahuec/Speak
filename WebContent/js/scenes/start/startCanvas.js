@@ -29,10 +29,10 @@ function startCanvas(aGame, aParent) {
 
 	/* --- post-init-begin --- */
 
-	startButton.onInputOver.add(startHover, this);
-	startButton.onInputOut.add(startOut, this);
-	optionsButton.onInputOver.add(optionsHover, this);
-	optionsButton.onInputOut.add(optionsOut, this);
+	startButton.onInputOver.add(buttonScale, {button : this.fStartButton, scale: 1.25});
+	startButton.onInputOut.add(buttonScale, {button : this.fStartButton, scale: 1});
+	optionsButton.onInputOver.add(buttonScale, {button : this.fOptionsButton, scale: 1.25});
+	optionsButton.onInputOut.add(buttonScale, {button : this.fOptionsButton, scale: 1});
 
 	/* --- post-init-end --- */
 }
@@ -44,33 +44,6 @@ startCanvas.prototype.constructor = Phaser.Group;
 
 /* --- end generated code --- */
 
-/*
- * Handles Hovering over the Start Button
- */
-function startHover() {
-	this.fStartButton.scale.setTo(1.25, 1.25);
-}
-
-/*
- * Resets the start button after leaving it
- */
-function startOut() {
-	this.fStartButton.scale.setTo(1, 1);	
-}
-
-/*
- * Handles Hovering over the Options Button
- */
-function optionsHover() {
-	this.fOptionsButton.scale.setTo(1.25, 1.25);
-}
-
-/*
- * Resets the options button after leaving it
- */
-function optionsOut() {
-	this.fOptionsButton.scale.setTo(1, 1);	
-}
 
 /*
  * Starts the game when clicking the start button.

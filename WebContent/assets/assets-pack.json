@@ -33,12 +33,6 @@
     ],
     "preload": [
         {
-            "type": "image",
-            "key": "loading",
-            "url": "assets/images/loading.png",
-            "overwrite": false
-        },
-        {
             "type": "script",
             "key": "Start",
             "url": "js/scenes/start/Start.js"
@@ -52,6 +46,12 @@
             "type": "script",
             "key": "GameOver",
             "url": "js/scenes/gameOver/GameOver.js"
+        },
+        {
+            "type": "image",
+            "key": "loading",
+            "url": "assets/preload/loading.png",
+            "overwrite": false
         }
     ],
     "HUD": [
@@ -94,8 +94,21 @@
             "url": "js/scenes/gameOver/GameOverCanvas.js"
         }
     ],
+    "gameData": [
+        {
+            "type": "json",
+            "key": "GameData",
+            "url": "assets/data/GameData.json",
+            "overwrite": false
+        },
+        {
+            "type": "script",
+            "key": "GameStats",
+            "url": "js/GameStats.js"
+        }
+    ],
     "meta": {
-        "generated": "1494397936944",
+        "generated": "1494475508071",
         "app": "Phaser Editor",
         "url": "http://phasereditor.boniatillo.com",
         "version": "1.0",

@@ -19,6 +19,9 @@ Preload.prototype.preload = function() {
 	preloadBar.anchor.set(0.5, 0.5);
 	this.load.setPreloadSprite(preloadBar);
 	
+	this.game.stats = new GameStats();
+	
+	
 	this.game.state.add("Start", Start);
 	this.game.state.add("Alarm", Alarm);
 	this.game.state.add("GameOver", GameOver);
@@ -28,8 +31,10 @@ Preload.prototype.preload = function() {
 	this.load.pack("alarm", "assets/assets-pack.json");
 	this.load.pack("HUD", "assets/assets-pack.json");
 	this.load.pack("gameOver", "assets/assets-pack.json");
+	this.load.pack("gameData", "assets/assets-pack.json");
 };
 
 Preload.prototype.create = function() {
+	this.game.data = this.game.cache.getJSON('GameData');
 	this.game.state.start("Start");
 };

@@ -3,7 +3,8 @@
     "/Speak/WebContent/assets/images/gameOver/learnButton.png",
     "/Speak/WebContent/assets/images/gameOver/restartButton.png",
     "/Speak/Design/images/start/start.png",
-    "/Speak/Design/images/start/options.png"
+    "/Speak/Design/images/start/options.png",
+    "/Speak/Design/images/start/loading.png"
   ],
   "settings": {
     "pot": false,

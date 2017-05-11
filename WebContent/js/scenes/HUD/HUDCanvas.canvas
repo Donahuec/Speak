@@ -4,8 +4,8 @@
     "sceneHeight": 1080,
     "generateOnSave": true,
     "enableStepping": true,
-    "stepWidth": 100,
-    "stepHeight": 1
+    "stepWidth": 10,
+    "stepHeight": 50
   },
   "world": {
     "type": "group",
@@ -124,6 +124,81 @@
             "width": 4,
             "height": 15
           }
+        },
+        {
+          "type": "group",
+          "id": "f54a1ce3-b64e-4ad7-8fce-dc0babab6749",
+          "info": {
+            "editorName": "options",
+            "editorPublic": true,
+            "children": [
+              {
+                "type": "button",
+                "id": "bc0793ff-f9be-4e9d-b453-bbb53439a47f",
+                "asset": "6",
+                "info": {
+                  "editorName": "optionOne",
+                  "editorPublic": true,
+                  "x": 960,
+                  "y": 250,
+                  "anchor.x": 0.5,
+                  "anchor.y": 0.5
+                }
+              },
+              {
+                "type": "button",
+                "id": "18babca4-9962-4e0b-8df9-aa188cdb96b3",
+                "asset": "6",
+                "info": {
+                  "editorName": "optionTwo",
+                  "editorPublic": true,
+                  "x": 960,
+                  "y": 350,
+                  "anchor.x": 0.5,
+                  "anchor.y": 0.5
+                }
+              },
+              {
+                "type": "button",
+                "id": "01682a2d-8ec0-4c13-932e-bd44fe9e98cb",
+                "asset": "6",
+                "info": {
+                  "editorName": "optionThree",
+                  "editorPublic": true,
+                  "x": 960,
+                  "y": 450,
+                  "anchor.x": 0.5,
+                  "anchor.y": 0.5
+                }
+              },
+              {
+                "type": "button",
+                "id": "e8715173-591e-44af-8e6e-74509c2632e6",
+                "asset": "6",
+                "info": {
+                  "editorName": "optionFour",
+                  "editorPublic": true,
+                  "x": 960,
+                  "y": 550,
+                  "anchor.x": 0.5,
+                  "anchor.y": 0.5
+                }
+              },
+              {
+                "type": "button",
+                "id": "61c6e307-8555-4825-85a7-43a9020734a0",
+                "asset": "6",
+                "info": {
+                  "editorName": "optionFive",
+                  "editorPublic": true,
+                  "x": 960,
+                  "y": 650,
+                  "anchor.x": 0.5,
+                  "anchor.y": 0.5
+                }
+              }
+            ]
+          }
         }
       ]
     }
@@ -164,6 +239,12 @@
       "section": "HUD",
       "asset": "HUDAtlas",
       "sprite": "barFill"
+    },
+    "6": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "HUD",
+      "asset": "HUDAtlas",
+      "sprite": "option"
     }
   }
 }

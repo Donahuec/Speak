@@ -1,11 +1,31 @@
 {
   "frames": {
+    "loading": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 664,
+        "y": 48,
+        "w": 298,
+        "h": 52
+      },
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 3,
+        "w": 298,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 58
+      }
+    },
     "options": {
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 353,
-        "y": 10,
+        "x": 482,
+        "y": 102,
         "w": 456,
         "h": 80
       },
@@ -24,8 +44,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 482,
-        "y": 100,
+        "x": 353,
+        "y": 8,
         "w": 309,
         "h": 82
       },

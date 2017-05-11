@@ -5,7 +5,8 @@
     "/Speak/Design/images/HUD/footer.png",
     "/Speak/Design/images/HUD/header.png",
     "/Speak/Design/images/HUD/leftBarEnd.png",
-    "/Speak/Design/images/HUD/rightBarEnd.png"
+    "/Speak/Design/images/HUD/rightBarEnd.png",
+    "/Speak/Design/images/HUD/option.png"
   ],
   "settings": {
     "pot": false,

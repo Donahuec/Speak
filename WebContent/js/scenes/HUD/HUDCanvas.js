@@ -38,15 +38,50 @@ function HUDCanvas(aGame, aParent) {
 	var stressFill = this.game.add.tileSprite(119, 43, 4, 15, 'HUDAtlas', 'barFill', this);
 	stressFill.scale.setTo(60.69777847539599, 1.0);
 
+	var options = this.game.add.group(this);
+
+	var optionOne = this.game.add.button(960, 250, 'HUDAtlas', null, this, null, 'option', null, null, options);
+	optionOne.anchor.setTo(0.5, 0.5);
+
+	var optionTwo = this.game.add.button(960, 350, 'HUDAtlas', null, this, null, 'option', null, null, options);
+	optionTwo.anchor.setTo(0.5, 0.5);
+
+	var optionThree = this.game.add.button(960, 450, 'HUDAtlas', null, this, null, 'option', null, null, options);
+	optionThree.anchor.setTo(0.5, 0.5);
+
+	var optionFour = this.game.add.button(960, 550, 'HUDAtlas', null, this, null, 'option', null, null, options);
+	optionFour.anchor.setTo(0.5, 0.5);
+
+	var optionFive = this.game.add.button(960, 650, 'HUDAtlas', null, this, null, 'option', null, null, options);
+	optionFive.anchor.setTo(0.5, 0.5);
+
 	 // public fields
 
 	this.fAnxietyFill = anxietyFill;
 	this.fStressFill = stressFill;
+	this.fOptions = options;
+	this.fOptionOne = optionOne;
+	this.fOptionTwo = optionTwo;
+	this.fOptionThree = optionThree;
+	this.fOptionFour = optionFour;
+	this.fOptionFive = optionFive;
 
 	/* --- post-init-begin --- */
 
-	// you can insert code here
+	optionOne.onInputOver.add(buttonScale, {button : this.fOptionOne, scale: 1.05});
+	optionOne.onInputOut.add(buttonScale, {button : this.fOptionOne, scale: 1});
 
+	optionTwo.onInputOver.add(buttonScale, {button : this.fOptionTwo, scale: 1.05});
+	optionTwo.onInputOut.add(buttonScale, {button : this.fOptionTwo, scale: 1});
+	
+	optionThree.onInputOver.add(buttonScale, {button : this.fOptionThree, scale: 1.05});
+	optionThree.onInputOut.add(buttonScale, {button : this.fOptionThree, scale: 1});
+	
+	optionFour.onInputOver.add(buttonScale, {button : this.fOptionFour, scale: 1.05});
+	optionFour.onInputOut.add(buttonScale, {button : this.fOptionFour, scale: 1});
+	
+	optionFive.onInputOver.add(buttonScale, {button : this.fOptionFive, scale: 1.05});
+	optionFive.onInputOut.add(buttonScale, {button : this.fOptionFive, scale: 1});
 	/* --- post-init-end --- */
 }
 
