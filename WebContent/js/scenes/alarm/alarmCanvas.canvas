@@ -11,10 +11,13 @@
     "info": {
       "editorName": "alarmCanvas",
       "children": [{
-        "type": "image",
-        "id": "a1e1ad0f-3538-423e-a689-77eb5b348a4e",
+        "type": "button",
+        "id": "690dc31a-1891-4d9e-bfc7-7c7b6c3afef1",
         "asset": "0",
-        "info": {"editorName": "alarm_bg"}
+        "info": {
+          "editorName": "alarm_bg",
+          "editorPublic": true
+        }
       }]
     }
   },

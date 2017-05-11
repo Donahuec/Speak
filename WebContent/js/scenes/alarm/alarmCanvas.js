@@ -10,12 +10,14 @@ function alarmCanvas(aGame, aParent) {
 
 	/* --- pre-init-begin --- */
 
-	// you can insert code here
 
 	/* --- pre-init-end --- */
 
-	this.game.add.sprite(0, 0, 'alarm_bg', null, this);
+	var alarm_bg = this.game.add.button(0, 0, 'alarm_bg', null, this, null, null, null, null, this);
 
+	 // public fields
+
+	this.fAlarm_bg = alarm_bg;
 
 	/* --- post-init-begin --- */
 
@@ -35,4 +37,5 @@ alarmCanvas.prototype.constructor = Phaser.Group;
 /* --- end generated code --- */
 
 // you can insert code here
+
 

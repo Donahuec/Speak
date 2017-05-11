@@ -61,8 +61,8 @@ function GameStats() {
     
     /**
      * Sets the time based off of given hours and minutes
-     * @param number that represents number of hours to add
-     * @param number to represent number of minutes to add
+     * @param hours : number that represents number of hours to add
+     * @param minutes : number to represent number of minutes to add
      */
     this.updateTime = function(hours, minutes) {
     	time.hour += hours;
@@ -95,7 +95,7 @@ function GameStats() {
     };
     
     /**
-     * @param boolean that says wheter or not to use a 12 hour clock
+     * @param setTo : boolean that says wheter or not to use a 12 hour clock
      */
     this.setTwelveHourClock= function(setTo) {
     	twelveHourClock = setTo;

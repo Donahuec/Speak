@@ -1,17 +1,5 @@
 {
-    "level": [{
-        "type": "image",
-        "key": "mono",
-        "url": "assets/images/mono.png",
-        "overwrite": false
-    }],
     "start": [
-        {
-            "type": "image",
-            "key": "tap-to-start",
-            "url": "assets/images/tap-to-start.png",
-            "overwrite": false
-        },
         {
             "type": "image",
             "key": "startBackground",
@@ -108,7 +96,7 @@
         }
     ],
     "meta": {
-        "generated": "1494475508071",
+        "generated": "1494486282800",
         "app": "Phaser Editor",
         "url": "http://phasereditor.boniatillo.com",
         "version": "1.0",

@@ -82,6 +82,8 @@ function HUDCanvas(aGame, aParent) {
 	
 	optionFive.onInputOver.add(buttonScale, {button : this.fOptionFive, scale: 1.05});
 	optionFive.onInputOut.add(buttonScale, {button : this.fOptionFive, scale: 1});
+	
+	options.visible = false;
 	/* --- post-init-end --- */
 }
 
