@@ -14,10 +14,3 @@ window.onload = function() {
 };
 
 
-/**
- * Scales a button. needs to be passed a context containing a this.button that has the button, and this.scale that defines what size to scale the button to.
- * To be used for button callbacks
- */
-function buttonScale() {
-	this.button.scale.setTo(this.scale, this.scale);
-}

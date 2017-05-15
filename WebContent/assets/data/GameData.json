@@ -2,73 +2,82 @@
 	"template" : {
 		"description" : "",
 		"Interaction" : {
-			"desc" : "",
-			"option" : {
-				"title" : "",
-				"desc" : "",
-				"time" : {
-					"hoursTaken" : 0,
-					"minutesTaken" : 0,
-					"hourLimit" : 0,
-					"minuteLimit" : 0,
-					"timeout" : ""
-				},
-				"anxiety" : {
-					"change" : 0,
-					"min" : 0,
-					"max" : 0
-				},
-				"stress" : {
-					"change" : 0,
-					"min" : 0,
-					"max" : 0
+			"description" : "",
+			"limit" : -1,
+			"options" : {
+				"option" : {
+					"index" : 0,
+					"title" : "",
+					"description" : "",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 0,
+						"hourLimit" : 0,
+						"minuteLimit" : 0,
+						"timeout" : ""
+					},
+					"anxiety" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					},
+					"stress" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					}
 				}
 			}
 		}	
 	},
 	"alarm" : {
 		"description" : "You open your eyes slowly. Your alarm is blaring. You have work at 9:00. You blink a few times, trying to clear the fog of sleep from your brain. The nightmares are still lingering. You should get up so you can eat breakfast, and then get to work. If you sleep too late you'll have to take the bus, which is always an unpleasant experience, but sleep is tugging on your brain...",
+		"limit" : -1,
 		"alarmGoesOff" : {
-			"desc" : "You open your eyes slowly. Your alarm is blaring. You have work at 9:00. You blink a few times, trying to clear the fog of sleep from your brain. The nightmares are still lingering. You should get up so you can eat breakfast, and then get to work. If you sleep too late you'll have to take the bus, which is always an unpleasant experience, but sleep is tugging on your brain...",
-			"snooze" : {
-				"title" : "Snooze The Alarm",
-				"desc" : "Snooze your alarm. It takes 50 minutes to walk to work, and 20 to ride the bus, given you don't run into any obstacles today. You should definitely eat breakfast before work today, you can feel your stomach growling... but if you could just sleep for a few more minutes maybe you'll feel a bit more rested... (15 minutes)",
-				"time" : {
-					"hoursTaken" : 0,
-					"minutesTaken" : 15,
-					"hourLimit" : 8,
-					"minuteLimit" : 10,
-					"timeout" : "You really need to get up, or you will miss work."
+			"description" : "You open your eyes slowly. Your alarm is blaring. You have work at 9:00. You blink a few times, trying to clear the fog of sleep from your brain. The nightmares are still lingering. You should get up so you can eat breakfast, and then get to work. If you sleep too late you'll have to take the bus, which is always an unpleasant experience, but sleep is tugging on your brain...",
+			"options" : {
+				"snooze" : {
+					"index" : 0,
+					"title" : "Snooze The Alarm",
+					"description" : "Snooze your alarm. It takes 50 minutes to walk to work, and 20 to ride the bus, given you don't run into any obstacles today. You should definitely eat breakfast before work today, you can feel your stomach growling... but if you could just sleep for a few more minutes maybe you'll feel a bit more rested... (15 minutes)",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 15,
+						"hourLimit" : 8,
+						"minuteLimit" : 10,
+						"timeout" : "You really need to get up, or you will miss work."
+					},
+					"anxiety" : {
+						"change" : -2,
+						"min" : -5,
+						"max" : 0
+					},
+					"stress" : {
+						"change" : 2,
+						"min" : 0,
+						"max" : 5
+					}
 				},
-				"anxiety" : {
-					"change" : -2,
-					"min" : -5,
-					"max" : 0
-				},
-				"stress" : {
-					"change" : 2,
-					"min" : 0,
-					"max" : 5
-				}
-			},
-			"getUp" : {
-				"title" : "Get Up",
-				"desc" : "Get out of bed, shower, and get dressed.(30 minutes)",
-				"time" : {
-					"hoursTaken" : 0,
-					"minutesTaken" : 30,
-					"hourLimit" : 0,
-					"minuteLimit" : 0
-				},
-				"anxiety" : {
-					"change" : 0,
-					"min" : 0,
-					"max" : 0
-				},
-				"stress" : {
-					"change" : 0,
-					"min" : 0,
-					"max" : 0
+				"getUp" : {
+					"index" : 1,
+					"title" : "Get Up",
+					"description" : "Get out of bed, shower, and get dressed.(30 minutes)",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 30,
+						"hourLimit" : 0,
+						"minuteLimit" : 0
+					},
+					"anxiety" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					},
+					"stress" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					}
 				}
 			}
 		}

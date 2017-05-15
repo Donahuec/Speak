@@ -16,7 +16,7 @@ function HUDCanvas(aGame, aParent) {
 
 	this.game.add.sprite(0, -129, 'HUDAtlas', 'header', this);
 
-	this.game.add.sprite(0, 797, 'HUDAtlas', 'footer', this);
+	var footer = this.game.add.sprite(0, 797, 'HUDAtlas', 'footer', this);
 
 	this.game.add.sprite(111, 10, 'HUDAtlas', 'leftBarEnd', this);
 
@@ -26,7 +26,11 @@ function HUDCanvas(aGame, aParent) {
 	this.game.add.sprite(1667, 10, 'HUDAtlas', 'rightBarEnd', this);
 
 	var anxietyFill = this.game.add.tileSprite(119, 12, 4, 15, 'HUDAtlas', 'barFill', this);
-	anxietyFill.scale.setTo(60.69777847539599, 1.0);
+	anxietyFill.data = {
+		"maxScale" : 388
+		};
+	
+	
 
 	this.game.add.sprite(111, 41, 'HUDAtlas', 'leftBarEnd', this);
 
@@ -36,24 +40,42 @@ function HUDCanvas(aGame, aParent) {
 	this.game.add.sprite(945, 41, 'HUDAtlas', 'rightBarEnd', this);
 
 	var stressFill = this.game.add.tileSprite(119, 43, 4, 15, 'HUDAtlas', 'barFill', this);
-	stressFill.scale.setTo(60.69777847539599, 1.0);
+	stressFill.data = {
+		"maxScale" : 207
+		};
+	
 
 	var options = this.game.add.group(this);
 
 	var optionOne = this.game.add.button(960, 250, 'HUDAtlas', null, this, null, 'option', null, null, options);
 	optionOne.anchor.setTo(0.5, 0.5);
+	optionOne.data = {
+		"index" : 1
+		};
 
 	var optionTwo = this.game.add.button(960, 350, 'HUDAtlas', null, this, null, 'option', null, null, options);
 	optionTwo.anchor.setTo(0.5, 0.5);
+	optionTwo.data = {
+		"index" : 2
+		};
 
 	var optionThree = this.game.add.button(960, 450, 'HUDAtlas', null, this, null, 'option', null, null, options);
 	optionThree.anchor.setTo(0.5, 0.5);
+	optionThree.data = {
+		"index" : 3
+		};
 
 	var optionFour = this.game.add.button(960, 550, 'HUDAtlas', null, this, null, 'option', null, null, options);
 	optionFour.anchor.setTo(0.5, 0.5);
+	optionFour.data = {
+		"index" : 4
+		};
 
 	var optionFive = this.game.add.button(960, 650, 'HUDAtlas', null, this, null, 'option', null, null, options);
 	optionFive.anchor.setTo(0.5, 0.5);
+	optionFive.data = {
+		"index" : 5
+		};
 
 	 // public fields
 
@@ -67,23 +89,79 @@ function HUDCanvas(aGame, aParent) {
 	this.fOptionFive = optionFive;
 
 	/* --- post-init-begin --- */
+	
+	stressFill.scale.setTo((this.game.stats.getStress() / MAX_STRESS) * stressFill.data.maxScale, 1.0);
+	anxietyFill.scale.setTo((this.game.stats.getAnxiety() / MAX_ANXIETY) * anxietyFill.data.maxScale, 1.0);
+	
+	
+	var descStyle = { font: "26px Arial", fill: "#DADFF2", align: "center", wordWrap : true, wordWrapWidth : footer.width * 0.75};
+	var description = this.game.add.text(Math.floor(footer.width / 2), footer.y * 1.25, "", descStyle);
+	description.text = "doot dooot loren ipsum loren ipsumloren ipsumloren ipsumloren ipsumloren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum done";
+	description.anchor.set(0.5);
+	
+	this.fDescription = description;
+	
+	var optionStyle = { font: "32px Arial", fill: "#DADFF2", align: "center"};
+	
+	var optionText = [this.game.add.text(optionOne.x, optionOne.y, "", optionStyle),
+	                  this.game.add.text(optionTwo.x, optionTwo.y, "", optionStyle),
+	                  this.game.add.text(optionThree.x, optionThree.y, "", optionStyle),
+	                  this.game.add.text(optionFour.x, optionFour.y, "", optionStyle),
+	                  this.game.add.text(optionFive.x, optionFive.y, "", optionStyle)];
+	
+	for (var i = 0; i < 5; i++) {
+		optionText[i].anchor.set(0.5, 0.5);
+		options.addChild(optionText[i]);
+	}
 
-	optionOne.onInputOver.add(buttonScale, {button : this.fOptionOne, scale: 1.05});
-	optionOne.onInputOut.add(buttonScale, {button : this.fOptionOne, scale: 1});
-
-	optionTwo.onInputOver.add(buttonScale, {button : this.fOptionTwo, scale: 1.05});
-	optionTwo.onInputOut.add(buttonScale, {button : this.fOptionTwo, scale: 1});
+	var optionButtons = [this.fOptionOne, 
+	                     this.fOptionTwo, 
+	                     this.fOptionThree, 
+	                     this.fOptionFour, 
+	                     this.fOptionFive];
 	
-	optionThree.onInputOver.add(buttonScale, {button : this.fOptionThree, scale: 1.05});
-	optionThree.onInputOut.add(buttonScale, {button : this.fOptionThree, scale: 1});
+	for (var i = 0; i < 5; i++) {
+		optionButtons[i].onInputOver.add(buttonScale, {button : optionButtons[i],
+			scale: 1.05, option : true, description : this.fDescription });
+		optionButtons[i].onInputOut.add(buttonScale, {button : optionButtons[i],
+			scale: 1, option : true, description : this.fDescription });
+	}
 	
-	optionFour.onInputOver.add(buttonScale, {button : this.fOptionFour, scale: 1.05});
-	optionFour.onInputOut.add(buttonScale, {button : this.fOptionFour, scale: 1});
 	
-	optionFive.onInputOver.add(buttonScale, {button : this.fOptionFive, scale: 1.05});
-	optionFive.onInputOut.add(buttonScale, {button : this.fOptionFive, scale: 1});
+	for (var i = 0; i < 5; i++) {		
+		optionText[i].visible = false;
+		optionButtons[i].visible = false;
+	}
 	
-	options.visible = false;
+	this.setDescriptionText = function(text) {
+		description.text = text;
+	};
+	
+	var setSingleOptionText = function(option) {
+		if (option != undefined) {
+			optionText[option.index].text = option.title;
+			optionButtons[option.index].data = option;
+		}
+	};
+	
+	this.setInteractionText = function(interaction){
+		for (option in interaction.options) {
+			setSingleOptionText(interaction.options[option]);
+		}
+		description.text = interaction.description;
+	};
+	
+	this.setInteractionText(this.game.data.alarm.alarmGoesOff);
+	
+	this.activateOptions = function() {
+		for (var i = 0; i < 5; i++) {		
+			if(optionText[i].text) {
+				optionText[i].visible = true;
+				optionButtons[i].visible = true;
+			}
+		}
+	};
+	
 	/* --- post-init-end --- */
 }
 

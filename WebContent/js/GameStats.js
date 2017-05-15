@@ -1,18 +1,4 @@
-var MAX_ANXIETY = 200;
-var STARTING_ANXIETY = 50;
-var MAX_STRESS = 50;
-var STARTING_STRESS = 10;
-var START_HOUR = 7;
-var START_MINUTE = 20;
-var AM = "AM";
-var PM = "PM";
-var NO_BREAKFAST = 0;
-var SMALL_BREAKFAST = 1;
-var MEDIUM_BREAKFAST = 2;
-var LARGE_BREAKFAST = 3;
-var PAST = -1;
-var CURRENT = 0;
-var FUTURE = 1;
+
 
 /**
  * Object that holds all of the information needed throughout the game.
@@ -29,6 +15,7 @@ function GameStats() {
     		am : ""
     };
     
+    var lastClicked = 0;
     var random = new Phaser.RandomDataGenerator();
     
     //start adding specific gameplay variables here.
@@ -191,6 +178,18 @@ function GameStats() {
         if (stress < 0) {
             stress = 0;
         }
+    };
+    
+    this.getLastClicked = function() {
+    	return lastClicked;
+    };
+    
+    this.setLastClicked = function(num) {
+    	lastClicked = num;
+    };
+    
+    this.resetLastClicked = function() {
+    	lastClicked = 0;
     };
 }
 

@@ -16,13 +16,15 @@ Alarm.prototype.create = function() {
 	this.scene = new alarmCanvas(this.game);
 	this.HUD = new HUDCanvas(this.game);
 	
-	this.scene.fAlarm_bg.onInputDown.add(clickBG, {option : this.HUD.fOptions});
+	this.scene.fAlarm_bg.onInputDown.add(clickBG, {HUD : this.HUD});
 	
 };
 
 Alarm.prototype.update = function() {
 	// TODO: generated method.
 };
+
 clickBG = function() {
-	this.option.visible = true;
+	console.log("click!");
+	this.HUD.activateOptions();
 }
