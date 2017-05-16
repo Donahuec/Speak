@@ -2,12 +2,8 @@
 
 /**
  * HUDCanvas.
- * 
- * @param {Phaser.Game}
- *            aGame The game.
- * @param {Phaser.Group}
- *            aParent The parent group. If not given the game world will be used
- *            instead.
+ * @param {Phaser.Game} aGame The game.
+ * @param {Phaser.Group} aParent The parent group. If not given the game world will be used instead.
  */
 function HUDCanvas(aGame, aParent) {
 	Phaser.Group.call(this, aGame, aParent);
@@ -23,82 +19,63 @@ function HUDCanvas(aGame, aParent) {
 
 	this.game.add.sprite(111, 10, 'HUDAtlas', 'leftBarEnd', this);
 
-	var anxietyBarMiddle = this.game.add.tileSprite(120, 10, 7, 19, 'HUDAtlas',
-			'barMiddle', this);
+	var anxietyBarMiddle = this.game.add.tileSprite(120, 10, 7, 19, 'HUDAtlas', 'barMiddle', this);
 	anxietyBarMiddle.scale.setTo(221.07512928627278, 1.0);
 
 	this.game.add.sprite(1667, 10, 'HUDAtlas', 'rightBarEnd', this);
 
-	var anxietyFill = this.game.add.tileSprite(119, 12, 4, 15, 'HUDAtlas',
-			'barFill', this);
+	var anxietyFill = this.game.add.tileSprite(119, 12, 4, 15, 'HUDAtlas', 'barFill', this);
 	anxietyFill.scale.setTo(205.75000134774817, 1.0);
 	anxietyFill.data = {
 		"maxScale" : 388
-	};
+		};
 
 	this.game.add.sprite(111, 41, 'HUDAtlas', 'leftBarEnd', this);
 
-	var stressBarMiddle = this.game.add.tileSprite(120, 41, 7, 19, 'HUDAtlas',
-			'barMiddle', this);
+	var stressBarMiddle = this.game.add.tileSprite(120, 41, 7, 19, 'HUDAtlas', 'barMiddle', this);
 	stressBarMiddle.scale.setTo(117.94871248565869, 1.0);
 
 	this.game.add.sprite(945, 41, 'HUDAtlas', 'rightBarEnd', this);
 
-	var stressFill = this.game.add.tileSprite(119, 43, 4, 15, 'HUDAtlas',
-			'barFill', this);
+	var stressFill = this.game.add.tileSprite(119, 43, 4, 15, 'HUDAtlas', 'barFill', this);
 	stressFill.scale.setTo(29.597236588509997, 1.0);
 	stressFill.data = {
 		"maxScale" : 207
-	};
+		};
 
 	var options = this.game.add.group(this);
 
-	var option0 = this.game.add.button(960, 250, 'HUDAtlas', optionClick, {
-		game : this.game,
-		index : 0
-	}, null, 'option', null, null, options);
+	var option0 = this.game.add.button(960, 250, 'HUDAtlas', optionClick, { game : this.game, index : 0}, null, 'option', null, null, options);
 	option0.anchor.setTo(0.5, 0.5);
 	option0.data = {
 		"index" : 1
-	};
+		};
 
-	var option1 = this.game.add.button(960, 350, 'HUDAtlas', optionClick, {
-		game : this.game,
-		index : 1
-	}, null, 'option', null, null, options);
+	var option1 = this.game.add.button(960, 350, 'HUDAtlas', optionClick, { game : this.game, index : 1 }, null, 'option', null, null, options);
 	option1.anchor.setTo(0.5, 0.5);
 	option1.data = {
 		"index" : 2
-	};
+		};
 
-	var option2 = this.game.add.button(960, 450, 'HUDAtlas', optionClick, {
-		game : this.game,
-		index : 2
-	}, null, 'option', null, null, options);
+	var option2 = this.game.add.button(960, 450, 'HUDAtlas', optionClick, { game : this.game, index : 2 }, null, 'option', null, null, options);
 	option2.anchor.setTo(0.5, 0.5);
 	option2.data = {
 		"index" : 3
-	};
+		};
 
-	var option3 = this.game.add.button(960, 550, 'HUDAtlas', optionClick, {
-		game : this.game,
-		index : 3
-	}, null, 'option', null, null, options);
+	var option3 = this.game.add.button(960, 550, 'HUDAtlas', optionClick, { game : this.game, index : 3 }, null, 'option', null, null, options);
 	option3.anchor.setTo(0.5, 0.5);
 	option3.data = {
 		"index" : 4
-	};
+		};
 
-	var option4 = this.game.add.button(960, 650, 'HUDAtlas', optionClick, {
-		game : this.game,
-		index : 4
-	}, null, 'option', null, null, options);
+	var option4 = this.game.add.button(960, 650, 'HUDAtlas', optionClick, { game : this.game, index : 4 }, null, 'option', null, null, options);
 	option4.anchor.setTo(0.5, 0.5);
 	option4.data = {
 		"index" : 5
-	};
+		};
 
-	// public fields
+	 // public fields
 
 	this.fFooter = footer;
 	this.fAnxietyFill = anxietyFill;
@@ -152,31 +129,41 @@ function HUDCanvas(aGame, aParent) {
 			this.fOption3, this.fOption4 ];
 
 	for (i = 0; i < 5; i++) {
+		optionButtons[i].forceOut = true;
+		
+		
 		optionButtons[i].onInputOver.add(buttonScale, {
 			button : optionButtons[i],
 			scale : 1.05,
 			option : true,
 			description : this.fDescription
 		});
+		
 		optionButtons[i].onInputOut.add(buttonScale, {
 			button : optionButtons[i],
 			scale : 1,
 			option : true,
 			description : this.fDescription
 		});
+
 	}
 
 	for (i = 0; i < 5; i++) {
 		optionText[i].visible = false;
 		optionButtons[i].visible = false;
 	}
+	
+	this.buttonReset = function() {
+		for (i = 0; i < 5; i++) {
+			//optionButtons[i].scale.setTo(1);
+		}
+	};
 
 	this.setDescriptionText = function(text) {
 		description.text = text;
 	};
 
 	this.setSingleOptionText = function(option) {
-		console.log(option.title + " " + option.time.hourLimit+ ":" + option.time.minuteLimit + " " + this.game.stats.timeCompare(option.time.hourLimit, option.time.minuteLimit));
 		if (option != undefined &&
 				this.game.stats.timeCompare(option.time.hourLimit, option.time.minuteLimit) !== PAST) {
 			optionText[option.index].text = option.title;
@@ -184,14 +171,18 @@ function HUDCanvas(aGame, aParent) {
 		} else if (option != undefined ) {
 			optionText[option.index].text = "";
 			optionButtons[option.index].data = undefined;
+			if (option.time.timeOut != undefined) {
+				description.text = option.time.timeOut;
+			}
 		}
 	};
 
 	this.setInteractionText = function(interaction) {
 		for (option in interaction.options) {
+			description.text = interaction.description;
 			this.setSingleOptionText(interaction.options[option]);
 		}
-		description.text = interaction.description;
+		
 	};
 
 	this.activateOptions = function(toActivate) {
@@ -199,6 +190,11 @@ function HUDCanvas(aGame, aParent) {
 			if (optionText[i].text) {
 				optionText[i].visible = toActivate;
 				optionButtons[i].visible = toActivate;
+				
+				if (toActivate == true){
+					optionButtons[i].scale.setTo(1);
+					optionButtons[i].reset(optionButtons[i].x, optionButtons[i].y);
+				}
 			}
 		}
 	};
@@ -218,4 +214,5 @@ HUDCanvas.prototype.constructor = Phaser.Group;
  */
 function optionClick() {
 	this.game.stats.lastClicked = this.index;
+	
 }

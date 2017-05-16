@@ -14,7 +14,7 @@
 						"minutesTaken" : 0,
 						"hourLimit" : 0,
 						"minuteLimit" : 0,
-						"timeout" : ""
+						"timeOut" : ""
 					},
 					"anxiety" : {
 						"change" : 0,
@@ -66,7 +66,7 @@
 						"minutesTaken" : 15,
 						"hourLimit" : 8,
 						"minuteLimit" : 10,
-						"timeout" : "You really need to get up, or you will miss work."
+						"timeOut" : "You really need to get up, or you will miss work."
 					},
 					"anxiety" : {
 						"change" : -2,

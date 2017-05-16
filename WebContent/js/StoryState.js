@@ -29,6 +29,7 @@ StoryState.prototype.clearInteraction = function() {
 	this.game.stats.curInteraction = null;
 	this.game.stats.lastClicked = -1;
 	this.HUD.activateOptions(false);
+	
 };
 
 StoryState.prototype.handleInteraction = function() {
