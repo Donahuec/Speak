@@ -18,6 +18,7 @@ var PAST = -1;
 var CURRENT = 0;
 var FUTURE = 1;
 
+
 /**
  * Scales a button. needs to be passed a context containing a this.button that has the button, 
  * and this.scale that defines what size to scale the button to.

@@ -102,6 +102,8 @@ function GameStats() {
      * @return -1 if given time is in the past, 0 if current, 1 if in future. Can use constants that define these.
      */
     this.timeCompare = function(hour, minute) {
+    	if ((hour == undefined || minute == undefined) || (hour === 0 && minute === 0)) return null;
+    	
     	if (hour < time.hour) return PAST;
     	else if (hour > time.hour) return FUTURE;
     	else if (hour === time.hour && minute < time.minute) return PAST;

@@ -175,16 +175,21 @@ function HUDCanvas(aGame, aParent) {
 		description.text = text;
 	};
 
-	var setSingleOptionText = function(option) {
-		if (option != undefined) {
+	this.setSingleOptionText = function(option) {
+		console.log(option.title + " " + option.time.hourLimit+ ":" + option.time.minuteLimit + " " + this.game.stats.timeCompare(option.time.hourLimit, option.time.minuteLimit));
+		if (option != undefined &&
+				this.game.stats.timeCompare(option.time.hourLimit, option.time.minuteLimit) !== PAST) {
 			optionText[option.index].text = option.title;
 			optionButtons[option.index].data = option;
+		} else if (option != undefined ) {
+			optionText[option.index].text = "";
+			optionButtons[option.index].data = undefined;
 		}
 	};
 
 	this.setInteractionText = function(interaction) {
 		for (option in interaction.options) {
-			setSingleOptionText(interaction.options[option]);
+			this.setSingleOptionText(interaction.options[option]);
 		}
 		description.text = interaction.description;
 	};
