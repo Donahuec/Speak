@@ -21,10 +21,10 @@ Preload.prototype.preload = function() {
 	
 	this.game.stats = new GameStats();
 	
-	
+	this.game.state.add("StoryState", StoryState);
 	this.game.state.add("Start", Start);
 	this.game.state.add("Alarm", Alarm);
-	this.game.state.add("GameOver", GameOver);
+	
 
 	// Here we load the rest of the assets our game needs.
 	this.load.pack("start", "assets/assets-pack.json");

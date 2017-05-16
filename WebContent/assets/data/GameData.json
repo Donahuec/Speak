@@ -57,7 +57,7 @@
 						"min" : 0,
 						"max" : 5
 					}
-				},
+				}, 
 				"getUp" : {
 					"index" : 1,
 					"title" : "Get Up",

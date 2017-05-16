@@ -22,7 +22,7 @@ var FUTURE = 1;
  * Scales a button. needs to be passed a context containing a this.button that has the button, 
  * and this.scale that defines what size to scale the button to.
  * and this.option which is a boolean that determines if it is an option button or not
- * if it is an option, inclued this.description
+ * if it is an option, inclued this.description, and this.index
  * To be used for button callbacks
  */
 function buttonScale() {
@@ -34,7 +34,6 @@ function buttonScale() {
 			} else {
 				this.button.returnDescription = this.description.text;
 				this.description.text = this.button.data.description;
-				
 			}
 			
 		}

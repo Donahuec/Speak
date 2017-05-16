@@ -23,8 +23,8 @@ function alarmCanvas(aGame, aParent) {
 
 	var style = { font: "bold 500px LCD", fill: "#f00"};
 
-    //  The Text is positioned at 0, 100
-    this.text = this.game.add.text(350, 270, this.game.stats.getTimeString().slice(0, 5), style);
+
+    this.alarmTime = this.game.add.text(350, 270, this.game.stats.getTimeString().slice(0, 5), style);
 
 	/* --- post-init-end --- */
 }

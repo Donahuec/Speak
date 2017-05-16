@@ -2,8 +2,12 @@
 
 /**
  * HUDCanvas.
- * @param {Phaser.Game} aGame The game.
- * @param {Phaser.Group} aParent The parent group. If not given the game world will be used instead.
+ * 
+ * @param {Phaser.Game}
+ *            aGame The game.
+ * @param {Phaser.Group}
+ *            aParent The parent group. If not given the game world will be used
+ *            instead.
  */
 function HUDCanvas(aGame, aParent) {
 	Phaser.Group.call(this, aGame, aParent);
@@ -11,7 +15,6 @@ function HUDCanvas(aGame, aParent) {
 	/* --- pre-init-begin --- */
 
 	// you can insert code here
-
 	/* --- pre-init-end --- */
 
 	this.game.add.sprite(0, -129, 'HUDAtlas', 'header', this);
@@ -20,148 +23,181 @@ function HUDCanvas(aGame, aParent) {
 
 	this.game.add.sprite(111, 10, 'HUDAtlas', 'leftBarEnd', this);
 
-	var anxietyBarMiddle = this.game.add.tileSprite(120, 10, 7, 19, 'HUDAtlas', 'barMiddle', this);
+	var anxietyBarMiddle = this.game.add.tileSprite(120, 10, 7, 19, 'HUDAtlas',
+			'barMiddle', this);
 	anxietyBarMiddle.scale.setTo(221.07512928627278, 1.0);
 
 	this.game.add.sprite(1667, 10, 'HUDAtlas', 'rightBarEnd', this);
 
-	var anxietyFill = this.game.add.tileSprite(119, 12, 4, 15, 'HUDAtlas', 'barFill', this);
+	var anxietyFill = this.game.add.tileSprite(119, 12, 4, 15, 'HUDAtlas',
+			'barFill', this);
+	anxietyFill.scale.setTo(205.75000134774817, 1.0);
 	anxietyFill.data = {
 		"maxScale" : 388
-		};
-	
-	
+	};
 
 	this.game.add.sprite(111, 41, 'HUDAtlas', 'leftBarEnd', this);
 
-	var stressBarMiddle = this.game.add.tileSprite(120, 41, 7, 19, 'HUDAtlas', 'barMiddle', this);
+	var stressBarMiddle = this.game.add.tileSprite(120, 41, 7, 19, 'HUDAtlas',
+			'barMiddle', this);
 	stressBarMiddle.scale.setTo(117.94871248565869, 1.0);
 
 	this.game.add.sprite(945, 41, 'HUDAtlas', 'rightBarEnd', this);
 
-	var stressFill = this.game.add.tileSprite(119, 43, 4, 15, 'HUDAtlas', 'barFill', this);
+	var stressFill = this.game.add.tileSprite(119, 43, 4, 15, 'HUDAtlas',
+			'barFill', this);
+	stressFill.scale.setTo(29.597236588509997, 1.0);
 	stressFill.data = {
 		"maxScale" : 207
-		};
-	
+	};
 
 	var options = this.game.add.group(this);
 
-	var optionOne = this.game.add.button(960, 250, 'HUDAtlas', null, this, null, 'option', null, null, options);
-	optionOne.anchor.setTo(0.5, 0.5);
-	optionOne.data = {
+	var option0 = this.game.add.button(960, 250, 'HUDAtlas', optionClick, {
+		game : this.game,
+		index : 0
+	}, null, 'option', null, null, options);
+	option0.anchor.setTo(0.5, 0.5);
+	option0.data = {
 		"index" : 1
-		};
+	};
 
-	var optionTwo = this.game.add.button(960, 350, 'HUDAtlas', null, this, null, 'option', null, null, options);
-	optionTwo.anchor.setTo(0.5, 0.5);
-	optionTwo.data = {
+	var option1 = this.game.add.button(960, 350, 'HUDAtlas', optionClick, {
+		game : this.game,
+		index : 1
+	}, null, 'option', null, null, options);
+	option1.anchor.setTo(0.5, 0.5);
+	option1.data = {
 		"index" : 2
-		};
+	};
 
-	var optionThree = this.game.add.button(960, 450, 'HUDAtlas', null, this, null, 'option', null, null, options);
-	optionThree.anchor.setTo(0.5, 0.5);
-	optionThree.data = {
+	var option2 = this.game.add.button(960, 450, 'HUDAtlas', optionClick, {
+		game : this.game,
+		index : 2
+	}, null, 'option', null, null, options);
+	option2.anchor.setTo(0.5, 0.5);
+	option2.data = {
 		"index" : 3
-		};
+	};
 
-	var optionFour = this.game.add.button(960, 550, 'HUDAtlas', null, this, null, 'option', null, null, options);
-	optionFour.anchor.setTo(0.5, 0.5);
-	optionFour.data = {
+	var option3 = this.game.add.button(960, 550, 'HUDAtlas', optionClick, {
+		game : this.game,
+		index : 3
+	}, null, 'option', null, null, options);
+	option3.anchor.setTo(0.5, 0.5);
+	option3.data = {
 		"index" : 4
-		};
+	};
 
-	var optionFive = this.game.add.button(960, 650, 'HUDAtlas', null, this, null, 'option', null, null, options);
-	optionFive.anchor.setTo(0.5, 0.5);
-	optionFive.data = {
+	var option4 = this.game.add.button(960, 650, 'HUDAtlas', optionClick, {
+		game : this.game,
+		index : 4
+	}, null, 'option', null, null, options);
+	option4.anchor.setTo(0.5, 0.5);
+	option4.data = {
 		"index" : 5
-		};
+	};
 
-	 // public fields
+	// public fields
 
+	this.fFooter = footer;
 	this.fAnxietyFill = anxietyFill;
 	this.fStressFill = stressFill;
 	this.fOptions = options;
-	this.fOptionOne = optionOne;
-	this.fOptionTwo = optionTwo;
-	this.fOptionThree = optionThree;
-	this.fOptionFour = optionFour;
-	this.fOptionFive = optionFive;
+	this.fOption0 = option0;
+	this.fOption1 = option1;
+	this.fOption2 = option2;
+	this.fOption3 = option3;
+	this.fOption4 = option4;
 
 	/* --- post-init-begin --- */
-	
-	stressFill.scale.setTo((this.game.stats.getStress() / MAX_STRESS) * stressFill.data.maxScale, 1.0);
-	anxietyFill.scale.setTo((this.game.stats.getAnxiety() / MAX_ANXIETY) * anxietyFill.data.maxScale, 1.0);
-	
-	
-	var descStyle = { font: "26px Arial", fill: "#DADFF2", align: "center", wordWrap : true, wordWrapWidth : footer.width * 0.75};
-	var description = this.game.add.text(Math.floor(footer.width / 2), footer.y * 1.25, "", descStyle);
-	description.text = "doot dooot loren ipsum loren ipsumloren ipsumloren ipsumloren ipsumloren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum done";
+
+	stressFill.scale.setTo((this.game.stats.getStress() / MAX_STRESS)
+			* stressFill.data.maxScale, 1.0);
+	anxietyFill.scale.setTo((this.game.stats.getAnxiety() / MAX_ANXIETY)
+			* anxietyFill.data.maxScale, 1.0);
+
+	var descStyle = {
+		font : "26px Arial",
+		fill : "#DADFF2",
+		align : "center",
+		wordWrap : true,
+		wordWrapWidth : footer.width * 0.75
+	};
+	var description = this.game.add.text(Math.floor(footer.width / 2),
+			footer.y * 1.25, "", descStyle);
 	description.anchor.set(0.5);
-	
+
 	this.fDescription = description;
-	
-	var optionStyle = { font: "32px Arial", fill: "#DADFF2", align: "center"};
-	
-	var optionText = [this.game.add.text(optionOne.x, optionOne.y, "", optionStyle),
-	                  this.game.add.text(optionTwo.x, optionTwo.y, "", optionStyle),
-	                  this.game.add.text(optionThree.x, optionThree.y, "", optionStyle),
-	                  this.game.add.text(optionFour.x, optionFour.y, "", optionStyle),
-	                  this.game.add.text(optionFive.x, optionFive.y, "", optionStyle)];
-	
+
+	var optionStyle = {
+		font : "32px Arial",
+		fill : "#DADFF2",
+		align : "center"
+	};
+
+	var optionText = [
+			this.game.add.text(option0.x, option0.y, "", optionStyle),
+			this.game.add.text(option1.x, option1.y, "", optionStyle),
+			this.game.add.text(option2.x, option2.y, "", optionStyle),
+			this.game.add.text(option3.x, option3.y, "", optionStyle),
+			this.game.add.text(option4.x, option4.y, "", optionStyle) ];
+
 	for (var i = 0; i < 5; i++) {
 		optionText[i].anchor.set(0.5, 0.5);
 		options.addChild(optionText[i]);
 	}
 
-	var optionButtons = [this.fOptionOne, 
-	                     this.fOptionTwo, 
-	                     this.fOptionThree, 
-	                     this.fOptionFour, 
-	                     this.fOptionFive];
-	
-	for (var i = 0; i < 5; i++) {
-		optionButtons[i].onInputOver.add(buttonScale, {button : optionButtons[i],
-			scale: 1.05, option : true, description : this.fDescription });
-		optionButtons[i].onInputOut.add(buttonScale, {button : optionButtons[i],
-			scale: 1, option : true, description : this.fDescription });
+	var optionButtons = [ this.fOption0, this.fOption1, this.fOption2,
+			this.fOption3, this.fOption4 ];
+
+	for (i = 0; i < 5; i++) {
+		optionButtons[i].onInputOver.add(buttonScale, {
+			button : optionButtons[i],
+			scale : 1.05,
+			option : true,
+			description : this.fDescription
+		});
+		optionButtons[i].onInputOut.add(buttonScale, {
+			button : optionButtons[i],
+			scale : 1,
+			option : true,
+			description : this.fDescription
+		});
 	}
-	
-	
-	for (var i = 0; i < 5; i++) {		
+
+	for (i = 0; i < 5; i++) {
 		optionText[i].visible = false;
 		optionButtons[i].visible = false;
 	}
-	
+
 	this.setDescriptionText = function(text) {
 		description.text = text;
 	};
-	
+
 	var setSingleOptionText = function(option) {
 		if (option != undefined) {
 			optionText[option.index].text = option.title;
 			optionButtons[option.index].data = option;
 		}
 	};
-	
-	this.setInteractionText = function(interaction){
+
+	this.setInteractionText = function(interaction) {
 		for (option in interaction.options) {
 			setSingleOptionText(interaction.options[option]);
 		}
 		description.text = interaction.description;
 	};
-	
-	this.setInteractionText(this.game.data.alarm.alarmGoesOff);
-	
-	this.activateOptions = function() {
-		for (var i = 0; i < 5; i++) {		
-			if(optionText[i].text) {
-				optionText[i].visible = true;
-				optionButtons[i].visible = true;
+
+	this.activateOptions = function(toActivate) {
+		for (var i = 0; i < 5; i++) {
+			if (optionText[i].text) {
+				optionText[i].visible = toActivate;
+				optionButtons[i].visible = toActivate;
 			}
 		}
 	};
-	
+
 	/* --- post-init-end --- */
 }
 
@@ -172,5 +208,9 @@ HUDCanvas.prototype.constructor = Phaser.Group;
 
 /* --- end generated code --- */
 
-// you can insert code here
-
+/**
+ * Gets this.game and this.index passed as context
+ */
+function optionClick() {
+	this.game.stats.lastClicked = this.index;
+}

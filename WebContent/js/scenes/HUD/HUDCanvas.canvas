@@ -28,6 +28,7 @@
           "asset": "1",
           "info": {
             "editorName": "footer",
+            "editorPublic": true,
             "y": 797
           }
         },
@@ -121,7 +122,7 @@
             "editorPublic": true,
             "x": 119,
             "y": 43,
-            "scale.x": 26.09723572897445,
+            "scale.x": 29.597236588509997,
             "data": "{\r\n\"maxScale\" : 207\r\n}",
             "width": 4,
             "height": 15
@@ -139,13 +140,15 @@
                 "id": "bc0793ff-f9be-4e9d-b453-bbb53439a47f",
                 "asset": "6",
                 "info": {
-                  "editorName": "optionOne",
+                  "editorName": "option0",
                   "editorPublic": true,
                   "x": 960,
                   "y": 250,
                   "anchor.x": 0.5,
                   "anchor.y": 0.5,
-                  "data": "{\r\n\"index\" : 1\r\n}"
+                  "data": "{\r\n\"index\" : 1\r\n}",
+                  "callback": "optionClick",
+                  "callbackContext": "{ game : this.game, index : 0}"
                 }
               },
               {
@@ -153,13 +156,15 @@
                 "id": "18babca4-9962-4e0b-8df9-aa188cdb96b3",
                 "asset": "6",
                 "info": {
-                  "editorName": "optionTwo",
+                  "editorName": "option1",
                   "editorPublic": true,
                   "x": 960,
                   "y": 350,
                   "anchor.x": 0.5,
                   "anchor.y": 0.5,
-                  "data": "{\r\n\"index\" : 2\r\n}"
+                  "data": "{\r\n\"index\" : 2\r\n}",
+                  "callback": "optionClick",
+                  "callbackContext": "{ game : this.game, index : 1 }"
                 }
               },
               {
@@ -167,13 +172,15 @@
                 "id": "01682a2d-8ec0-4c13-932e-bd44fe9e98cb",
                 "asset": "6",
                 "info": {
-                  "editorName": "optionThree",
+                  "editorName": "option2",
                   "editorPublic": true,
                   "x": 960,
                   "y": 450,
                   "anchor.x": 0.5,
                   "anchor.y": 0.5,
-                  "data": "{\r\n\"index\" : 3\r\n}"
+                  "data": "{\r\n\"index\" : 3\r\n}",
+                  "callback": "optionClick",
+                  "callbackContext": "{ game : this.game, index : 2 }"
                 }
               },
               {
@@ -181,13 +188,15 @@
                 "id": "e8715173-591e-44af-8e6e-74509c2632e6",
                 "asset": "6",
                 "info": {
-                  "editorName": "optionFour",
+                  "editorName": "option3",
                   "editorPublic": true,
                   "x": 960,
                   "y": 550,
                   "anchor.x": 0.5,
                   "anchor.y": 0.5,
-                  "data": "{\r\n\"index\" : 4\r\n}"
+                  "data": "{\r\n\"index\" : 4\r\n}",
+                  "callback": "optionClick",
+                  "callbackContext": "{ game : this.game, index : 3 }"
                 }
               },
               {
@@ -195,13 +204,15 @@
                 "id": "61c6e307-8555-4825-85a7-43a9020734a0",
                 "asset": "6",
                 "info": {
-                  "editorName": "optionFive",
+                  "editorName": "option4",
                   "editorPublic": true,
                   "x": 960,
                   "y": 650,
                   "anchor.x": 0.5,
                   "anchor.y": 0.5,
-                  "data": "{\r\n\"index\" : 5\r\n}"
+                  "data": "{\r\n\"index\" : 5\r\n}",
+                  "callback": "optionClick",
+                  "callbackContext": "{ game : this.game, index : 4 }"
                 }
               }
             ]

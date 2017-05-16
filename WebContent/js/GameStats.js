@@ -5,6 +5,10 @@
  */
 function GameStats() {
 	this.curState = "Start";
+	
+	this.curInteraction = null;
+	this.lastClicked = -1;
+	
 	this.gameOver = false;
     var anxiety = STARTING_ANXIETY;
     var stress = STARTING_STRESS;
@@ -14,8 +18,7 @@ function GameStats() {
     		minute : START_MINUTE, 
     		am : ""
     };
-    
-    var lastClicked = 0;
+
     var random = new Phaser.RandomDataGenerator();
     
     //start adding specific gameplay variables here.
@@ -70,7 +73,10 @@ function GameStats() {
     	var hour;
     	var minute;
     	
-    	if (twelveHourClock) hour = curTime.hour % 12;
+    	if (twelveHourClock) {
+    		hour = curTime.hour % 12;
+    		if (hour === 0) hour = 12;
+    	}
     	else hour = curTime.hour;
     	minute = curTime.minute;
     	
@@ -121,16 +127,14 @@ function GameStats() {
     /**
      * Function that updates anxiety in a way that introduces some randomness, 
      * and is wighted by current stress and anxiety
-     * @param amount to update anxiety by. negative to decrease, positive to increase
-     * @param min to change anxiety by
-     * @param max to change anxiety by
+     * @param data from json
      */
-    this.updateAnxiety = function(amount, min, max) {
-    	var update = amount;
+    this.updateAnxiety = function(data) {
+    	var update = data.change;
     	//add in random variance
     	update *= random.realInRange(0, 2);
     	
-    	if(amount < 0) {
+    	if(data.change < 0) {
             update *= (2 - (stress / (MAX_STRESS / 2.0)));
             update *= (2 - (anxiety / (MAX_ANXIETY / 2.0)));
         } else {
@@ -138,10 +142,10 @@ function GameStats() {
             update *= (anxiety / (MAX_ANXIETY / 2.0));
         }
     	
-    	if (update > max){
-            update = max;
-        } else if (update < min) {
-            update = min;
+    	if (update > data.max){
+            update = data.max;
+        } else if (update < data.min) {
+            update = data.min;
         }
         //anxiety can't be less than 0
         anxiety += Math.round(update);
@@ -158,19 +162,17 @@ function GameStats() {
     
     /**
      * Function that updates stress in a way that introduces some randomness
-     * @param amount to update stress by. negative to decrease, positive to increase
-     * @param min to change stress by
-     * @param max to change stress by
+     * @param data from json
      */
-    this.updateStress = function(amount, min, max) {
+    this.updateStress = function(data) {
     	
-    	var update = amount;
+    	var update = data.change;
     	update *= random.realInRange(0, 2);
     	
-    	if (update > max){
-            update = max;
-        } else if (update < min) {
-            update = min;
+    	if (update > data.max){
+            update = data.max;
+        } else if (update < data.min) {
+            update = data.min;
         }
         //stress can't be less than 0
         stress += Math.round(update);
@@ -178,6 +180,10 @@ function GameStats() {
         if (stress < 0) {
             stress = 0;
         }
+        
+        if (stress >= MAX_STRESS) {
+            stress = MAX_STRESS;
+        } 
     };
     
     this.getLastClicked = function() {

@@ -2,7 +2,7 @@
  * Alarm state.
  */
 function Alarm() {
-	Phaser.State.call(this);
+	StoryState.call(this);
 	// TODO: generated method.
 }
 
@@ -14,17 +14,17 @@ Alarm.prototype.constructor = Alarm;
 
 Alarm.prototype.create = function() {
 	this.scene = new alarmCanvas(this.game);
-	this.HUD = new HUDCanvas(this.game);
-	
-	this.scene.fAlarm_bg.onInputDown.add(clickBG, {HUD : this.HUD});
+	StoryState.prototype.create.call(this);
+	this.scene.fAlarm_bg.onInputDown.add(clickBG, {HUD : this.HUD, game : this.game});
 	
 };
 
 Alarm.prototype.update = function() {
-	// TODO: generated method.
+	StoryState.prototype.update.call(this);
+
+	this.scene.alarmTime.text = this.game.stats.getTimeString().slice(0, 5);
 };
 
-clickBG = function() {
-	console.log("click!");
-	this.HUD.activateOptions();
-}
+clickBG = function(game) {
+	StoryState.prototype.startInteraction.call(this, this.game.data.alarm.alarmGoesOff);
+};
