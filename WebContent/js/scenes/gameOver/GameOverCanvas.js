@@ -19,7 +19,7 @@ function GameOverCanvas(aGame, aParent) {
 	var restartButton = this.game.add.button(448, 896, 'startAtlas', restartGame, this, null, 'restartButton', null, null, this);
 	restartButton.anchor.setTo(0.5, 0.5);
 
-	var learnButton = this.game.add.button(1472, 896, 'startAtlas', notImplemented, this, null, 'learnButton', null, null, this);
+	var learnButton = this.game.add.button(1472, 896, 'startAtlas', learn, this, null, 'learnButton', null, null, this);
 	learnButton.anchor.setTo(0.5, 0.5);
 
 	 // public fields
@@ -52,5 +52,13 @@ GameOverCanvas.prototype.constructor = Phaser.Group;
 function restartGame() {
 	this.game.stats.setStats();
 	this.game.state.start("Start");
+}
+
+/**
+ * button callback that links to a resource on anxiety. Will eventually make page on website to link to,
+ * which will have information
+ */
+function learn() {
+	window.open("http://nationalsocialanxietycenter.com/resources/", "_blank");
 }
 

@@ -4,20 +4,27 @@
  * Object that holds all of the information needed throughout the game.
  */
 function GameStats() {
-    var anxiety;
-    var stress;
-    var twelveHourClock;
-    var time;
-
+    var anxiety = null;
+    var stress = null;
+    var twelveHourClock = null;
+    var time = null;
     var random = new Phaser.RandomDataGenerator();
+    var curState = null;
+    var lastClicked = null; 
+    var curInteraction = null;
+    var gameOver = null;
 
     
     //Start adding functions
+    
+    /**
+     * Sets all of the stats to default values
+     */
     this.setStats = function() {
-    	this.curState = "Start";
-    	this.curInteraction = null;
-    	this.lastClicked = -1;
-    	this.gameOver = false;
+    	curState = "Start";
+    	curInteraction = null;
+    	lastClicked = -1;
+    	gameOver = false;
         anxiety = STARTING_ANXIETY;
         stress = STARTING_STRESS;
         twelveHourClock = true;
@@ -52,7 +59,6 @@ function GameStats() {
     		}
     		return newTime;
     	}
-    	
     	return time;
     };
     
@@ -93,20 +99,13 @@ function GameStats() {
     		
     	return hour + ":" + minute + " " +  curTime.am;
     };
-    
-    /**
-     * @param setTo : boolean that says wheter or not to use a 12 hour clock
-     */
-    this.setTwelveHourClock= function(setTo) {
-    	twelveHourClock = setTo;
-    };
-    
+     
     
     /**
      * Checks whether the given time is in the past present or future
      * @param hour to check
      * @param minute to check
-     * @return -1 if given time is in the past, 0 if current, 1 if in future. Can use constants that define these.
+     * @return If the given time is in the past present or future
      */
     this.timeCompare = function(hour, minute) {
     	if ((hour == undefined || minute == undefined) || (hour === 0 && minute === 0)) return null;
@@ -116,20 +115,6 @@ function GameStats() {
     	else if (hour === time.hour && minute < time.minute) return PAST;
     	else if (hour === time.hour && minute > time.minute) return FUTURE;
     	else return CURRENT;
-    };
-    
-    /**
-     * @return number representing the current anxiety level
-     */
-    this.getAnxiety = function() {
-    	return anxiety;
-    };
-    
-    /**
-     * @return number representing the current stress level
-     */
-    this.getStress = function() {
-    	return stress;
     };
     
     
@@ -164,7 +149,7 @@ function GameStats() {
         }
         //if anxiety is full end the game
         if (anxiety >= MAX_ANXIETY) {
-            this.gameOver = true;
+            gameOver = true;
         }      
     };
     
@@ -195,6 +180,23 @@ function GameStats() {
         } 
     };
     
+    //getters and setters
+    
+    /**
+     * @param setTo : boolean that says wheter or not to use a 12 hour clock
+     */
+    this.setTwelveHourClock= function(setTo) {
+    	twelveHourClock = setTo;
+    };
+    
+    this.getAnxiety = function() {
+    	return anxiety;
+    };
+    
+    this.getStress = function() {
+    	return stress;
+    };
+    
     this.getLastClicked = function() {
     	return lastClicked;
     };
@@ -204,9 +206,28 @@ function GameStats() {
     };
     
     this.resetLastClicked = function() {
-    	lastClicked = 0;
+    	lastClicked = -1;
     };
-
+    
+    this.getCurState = function() {
+    	return curState;
+    };
+    
+    this.setCurState = function(state) {
+    	curState = state;
+    };
+    
+    this.setCurInteraction = function(interaction) {
+    	curInteraction = interaction;
+    };
+    
+    this.getCurInteraction = function() {
+    	return curInteraction;
+    };
+    
+    this.getGameOver = function() {
+    	return gameOver;
+    };
 }
 
 

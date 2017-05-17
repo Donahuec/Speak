@@ -89,24 +89,28 @@ function HUDCanvas(aGame, aParent) {
 
 	/* --- post-init-begin --- */
 
+	//set status bars tp default values
 	stressFill.scale.setTo((this.game.stats.getStress() / MAX_STRESS)
 			* stressFill.data.maxScale, 1.0);
 	anxietyFill.scale.setTo((this.game.stats.getAnxiety() / MAX_ANXIETY)
 			* anxietyFill.data.maxScale, 1.0);
 
-	var descStyle = {
+	//set up the scene description text
+	var descriptionStyle = {
 		font : "26px Arial",
 		fill : "#DADFF2",
 		align : "center",
 		wordWrap : true,
 		wordWrapWidth : footer.width * 0.75
 	};
+	
 	var description = this.game.add.text(Math.floor(footer.width / 2),
-			footer.y * 1.25, "", descStyle);
+			footer.y * 1.25, "", descriptionStyle);
 	description.anchor.set(0.5);
 
 	this.fDescription = description;
 
+	//set up option text and buttons
 	var optionStyle = {
 		font : "32px Arial",
 		fill : "#DADFF2",
@@ -122,6 +126,7 @@ function HUDCanvas(aGame, aParent) {
 
 	for (var i = 0; i < 5; i++) {
 		optionText[i].anchor.set(0.5, 0.5);
+		//add to group that holds the buttons
 		options.addChild(optionText[i]);
 	}
 
@@ -129,9 +134,9 @@ function HUDCanvas(aGame, aParent) {
 			this.fOption3, this.fOption4 ];
 
 	for (i = 0; i < 5; i++) {
+		//TODO: figure out weird thing with buttons after being clicked
 		optionButtons[i].forceOut = true;
-		
-		
+
 		optionButtons[i].onInputOver.add(buttonScale, {
 			button : optionButtons[i],
 			scale : 1.05,
@@ -148,22 +153,24 @@ function HUDCanvas(aGame, aParent) {
 
 	}
 
+	//make sure buttons do not start visible
 	for (i = 0; i < 5; i++) {
 		optionText[i].visible = false;
 		optionButtons[i].visible = false;
 	}
-	
-	this.buttonReset = function() {
-		for (i = 0; i < 5; i++) {
-			//optionButtons[i].scale.setTo(1);
-		}
-	};
 
 	this.setDescriptionText = function(text) {
 		description.text = text;
 	};
 
+	/**
+	 * Sets the text for one option
+	 * @param option to set up
+	 */
 	this.setSingleOptionText = function(option) {
+		//if the option is undefined, then there are less than 5 options
+		//and this option does not exist, so don't display it
+		//Also don't display if it is passed its available time
 		if (option != undefined &&
 				this.game.stats.timeCompare(option.time.hourLimit, option.time.minuteLimit) !== PAST) {
 			optionText[option.index].text = option.title;
@@ -177,14 +184,23 @@ function HUDCanvas(aGame, aParent) {
 		}
 	};
 
+	/**
+	 * Set up all of the options for an interaction
+	 * @param interaction to set up
+	 */
 	this.setInteractionText = function(interaction) {
 		for (option in interaction.options) {
 			description.text = interaction.description;
 			this.setSingleOptionText(interaction.options[option]);
 		}
-		
 	};
 
+	/**
+	 * Make options visible or not. Do not display an option 
+	 * if it is an empty string
+	 * if toActivate is true, make sure buttons are reset to default size
+	 * @param toActivate true to make options visible, false to remove them
+	 */
 	this.activateOptions = function(toActivate) {
 		for (var i = 0; i < 5; i++) {
 			if (optionText[i].text) {
@@ -213,6 +229,5 @@ HUDCanvas.prototype.constructor = Phaser.Group;
  * Gets this.game and this.index passed as context
  */
 function optionClick() {
-	this.game.stats.lastClicked = this.index;
-	
+	this.game.stats.setLastClicked(this.index);
 }

@@ -3,35 +3,36 @@
  */
 function Alarm() {
 	StoryState.call(this);
-	// TODO: generated method.
 }
 
 /** @type Phaser.State */
-var proto = Object.create(Phaser.State.prototype);
+var proto = Object.create(StoryState.prototype);
 Alarm.prototype = proto;
 Alarm.prototype.constructor = Alarm;
 
+Alarm.prototype.init = function() {
+	StoryState.prototype.init.call(this);
+	
+	this.GET_UP = 0;
+};
 
 Alarm.prototype.create = function() {
 	this.scene = new alarmCanvas(this.game);
-	StoryState.prototype.setStateData.call(this, this.game.data.alarm);
+	this.setStateData(this.game.data.alarm);
+	
 	StoryState.prototype.create.call(this);
+	
 	this.scene.fAlarm_bg.onInputDown.add(startInteractionClick,
 			{HUD : this.HUD, game : this.game, 
-			interaction : this.data.alarmGoesOff });
-	
+			interaction : this.data.alarmGoesOff});	
 };
 
 Alarm.prototype.update = function() {
 	StoryState.prototype.update.call(this);
-	if (this.interactionReturn === 0) {
+	//Get up Button is clicked
+	if (this.interactionReturn === this.GET_UP) {
 		this.game.state.start("GameOver");
 	}
+	//display alarm clock text with just numbers, no AM or PM
 	this.scene.alarmTime.text = this.game.stats.getTimeString().slice(0, 5);
 };
-
-//clickBG = function(game) {
-//	console.log("click!");
-//	console.log(this);
-//	StoryState.prototype.startInteraction.call(this, this.game.data.alarm.alarmGoesOff);
-//};

@@ -6,7 +6,6 @@ window.onload = function() {
 
 	// Add the States your game has.
 	game.state.add("Boot", Boot);
-	
 	game.state.add("Preload", Preload);
 	
 	// Now start the Boot state.

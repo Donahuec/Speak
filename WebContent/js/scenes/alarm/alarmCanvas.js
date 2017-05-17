@@ -22,8 +22,6 @@ function alarmCanvas(aGame, aParent) {
 	/* --- post-init-begin --- */
 
 	var style = { font: "bold 500px LCD", fill: "#f00"};
-
-
     this.alarmTime = this.game.add.text(350, 270, this.game.stats.getTimeString().slice(0, 5), style);
     
 

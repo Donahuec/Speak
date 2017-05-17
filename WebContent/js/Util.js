@@ -2,6 +2,7 @@
  * File containing constants and utility functions
  */
 
+/* Constants for use throughout the game */
 var MAX_ANXIETY = 200;
 var STARTING_ANXIETY = 50;
 var MAX_STRESS = 50;
@@ -44,11 +45,15 @@ function buttonScale() {
 /**
  * Takes a context that includes HUD, the game, and the interaction
  *  that you want to activate
+ *  Button Callback that activates an interaction
  */
 function startInteractionClick() {
 	StoryState.prototype.startInteraction.call(this, this.interaction);
 }
 
+/**
+ * An alert pop-up for when a feature is not yet implemented
+ */
 function notImplemented() {
 	console.log("feature not implemented");
 	window.alert("This feature has not yet been implemented!");
