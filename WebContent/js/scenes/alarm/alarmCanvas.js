@@ -25,6 +25,7 @@ function alarmCanvas(aGame, aParent) {
 
 
     this.alarmTime = this.game.add.text(350, 270, this.game.stats.getTimeString().slice(0, 5), style);
+    
 
 	/* --- post-init-end --- */
 }

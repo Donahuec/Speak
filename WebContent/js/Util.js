@@ -41,3 +41,11 @@ function buttonScale() {
 	}
 }
 
+/**
+ * Takes a context that includes HUD, the game, and the interaction
+ *  that you want to activate
+ */
+function startInteractionClick() {
+	StoryState.prototype.startInteraction.call(this, this.interaction);
+}
+

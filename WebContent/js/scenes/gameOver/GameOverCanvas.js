@@ -74,6 +74,6 @@ function learnOut() {
  * Starts the game when clicking the start button.
  */
 function restartGame() {
-	this.game.state.start("Start");
+	this.game.state.start("Preload");
 }
 

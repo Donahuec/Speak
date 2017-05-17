@@ -24,6 +24,7 @@ Preload.prototype.preload = function() {
 	this.game.state.add("StoryState", StoryState);
 	this.game.state.add("Start", Start);
 	this.game.state.add("Alarm", Alarm);
+	this.game.state.add("GameOver", GameOver);
 	
 
 	// Here we load the rest of the assets our game needs.

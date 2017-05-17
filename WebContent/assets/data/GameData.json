@@ -32,7 +32,6 @@
 	},
 	"alarm" : {
 		"description" : "You open your eyes slowly. Your alarm is blaring. You have work at 9:00. You blink a few times, trying to clear the fog of sleep from your brain. The nightmares are still lingering. You should get up so you can eat breakfast, and then get to work. If you sleep too late you'll have to take the bus, which is always an unpleasant experience, but sleep is tugging on your brain...",
-		"limit" : -1,
 		"alarmGoesOff" : {
 			"description" : "You open your eyes slowly. Your alarm is blaring. You have work at 9:00. You blink a few times, trying to clear the fog of sleep from your brain. The nightmares are still lingering. You should get up so you can eat breakfast, and then get to work. If you sleep too late you'll have to take the bus, which is always an unpleasant experience, but sleep is tugging on your brain...",
 			"options" : { 

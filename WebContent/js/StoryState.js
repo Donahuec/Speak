@@ -13,10 +13,15 @@ StoryState.prototype.constructor = StoryState;
 
 StoryState.prototype.create = function() {
 	this.HUD = new HUDCanvas(this.game);
+	this.HUD.fDescription.text = this.data.description;
 };
 
 StoryState.prototype.update = function() {
 	this.interactionReturn = StoryState.prototype.handleInteraction.call(this);
+};
+
+StoryState.prototype.setStateData = function(data) {
+	this.data = data;
 };
 
 StoryState.prototype.startInteraction = function(interaction) {
