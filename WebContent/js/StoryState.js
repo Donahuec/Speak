@@ -12,6 +12,7 @@ StoryState.prototype.constructor = StoryState;
 
 
 StoryState.prototype.create = function() {
+	this.game.stats.curState = this.key;
 	this.HUD = new HUDCanvas(this.game);
 	this.HUD.fDescription.text = this.data.description;
 };

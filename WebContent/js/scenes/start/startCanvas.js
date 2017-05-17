@@ -16,7 +16,7 @@ function startCanvas(aGame, aParent) {
 
 	this.game.add.sprite(0, 0, 'startBackground', null, this);
 
-	var optionsButton = this.game.add.button(1500, 100, 'startAtlas', null, this, null, 'options', null, null, this);
+	var optionsButton = this.game.add.button(1500, 100, 'startAtlas', notImplemented, this, null, 'options', null, null, this);
 	optionsButton.anchor.setTo(0.5, 0.5);
 
 	var startButton = this.game.add.button(400, 100, 'startAtlas', startGame, this, null, 'start', null, null, this);

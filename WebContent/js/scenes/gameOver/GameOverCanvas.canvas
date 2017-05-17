@@ -41,7 +41,8 @@
             "x": 1472,
             "y": 896,
             "anchor.x": 0.5,
-            "anchor.y": 0.5
+            "anchor.y": 0.5,
+            "callback": "notImplemented"
           }
         }
       ]

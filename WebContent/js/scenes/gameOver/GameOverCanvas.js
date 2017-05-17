@@ -19,7 +19,7 @@ function GameOverCanvas(aGame, aParent) {
 	var restartButton = this.game.add.button(448, 896, 'startAtlas', restartGame, this, null, 'restartButton', null, null, this);
 	restartButton.anchor.setTo(0.5, 0.5);
 
-	var learnButton = this.game.add.button(1472, 896, 'startAtlas', null, this, null, 'learnButton', null, null, this);
+	var learnButton = this.game.add.button(1472, 896, 'startAtlas', notImplemented, this, null, 'learnButton', null, null, this);
 	learnButton.anchor.setTo(0.5, 0.5);
 
 	 // public fields
@@ -28,11 +28,11 @@ function GameOverCanvas(aGame, aParent) {
 	this.fLearnButton = learnButton;
 
 	/* --- post-init-begin --- */
-
-	restartButton.onInputOver.add(restartHover, this);
-	restartButton.onInputOut.add(restartOut, this);
-	learnButton.onInputOver.add(learnHover, this);
-	learnButton.onInputOut.add(learnOut, this);
+	
+	restartButton.onInputOver.add(buttonScale, {button : this.fRestartButton, scale: 1.25});
+	restartButton.onInputOut.add(buttonScale, {button : this.fRestartButton, scale: 1});
+	learnButton.onInputOver.add(buttonScale, {button : this.fLearnButton, scale: 1.25});
+	learnButton.onInputOut.add(buttonScale, {button : this.fLearnButton, scale: 1});
 
 
 	/* --- post-init-end --- */
@@ -45,35 +45,12 @@ GameOverCanvas.prototype.constructor = Phaser.Group;
 
 /* --- end generated code --- */
 
-function restartHover() {
-	this.fRestartButton.scale.setTo(1.25, 1.25);
-}
-
-/*
- * Resets the start button after leaving it
- */
-function restartOut() {
-	this.fRestartButton.scale.setTo(1, 1);	
-}
-
-/*
- * Handles Hovering over the Options Button
- */
-function learnHover() {
-	this.fLearnButton.scale.setTo(1.25, 1.25);
-}
-
-/*
- * Resets the options button after leaving it
- */
-function learnOut() {
-	this.fLearnButton.scale.setTo(1, 1);	
-}
 
 /*
  * Starts the game when clicking the start button.
  */
 function restartGame() {
-	this.game.state.start("Preload");
+	this.game.stats.setStats();
+	this.game.state.start("Start");
 }
 

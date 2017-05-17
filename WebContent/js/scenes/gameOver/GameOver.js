@@ -15,8 +15,5 @@ GameOver.prototype.constructor = GameOver;
 
 GameOver.prototype.create = function() {
 	this.scene = new GameOverCanvas(this.game);
-};
-
-GameOver.prototype.update = function() {
-	// TODO: generated method.
+	window.alert("You've reached the end of the implemented game! Keep an eye out for further updates!");
 };

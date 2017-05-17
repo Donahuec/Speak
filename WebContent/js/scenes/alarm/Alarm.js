@@ -24,7 +24,6 @@ Alarm.prototype.create = function() {
 
 Alarm.prototype.update = function() {
 	StoryState.prototype.update.call(this);
-	console.log(this.interactionReturn);
 	if (this.interactionReturn === 0) {
 		this.game.state.start("GameOver");
 	}

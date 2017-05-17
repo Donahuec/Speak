@@ -49,3 +49,8 @@ function startInteractionClick() {
 	StoryState.prototype.startInteraction.call(this, this.interaction);
 }
 
+function notImplemented() {
+	console.log("feature not implemented");
+	window.alert("This feature has not yet been implemented!");
+}
+

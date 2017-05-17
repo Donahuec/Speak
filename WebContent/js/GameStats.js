@@ -4,27 +4,34 @@
  * Object that holds all of the information needed throughout the game.
  */
 function GameStats() {
-	this.curState = "Start";
-	
-	this.curInteraction = null;
-	this.lastClicked = -1;
-	
-	this.gameOver = false;
-    var anxiety = STARTING_ANXIETY;
-    var stress = STARTING_STRESS;
-    var twelveHourClock = true;
-    var time = {
-    		hour : START_HOUR,
-    		minute : START_MINUTE, 
-    		am : ""
-    };
+    var anxiety;
+    var stress;
+    var twelveHourClock;
+    var time;
 
     var random = new Phaser.RandomDataGenerator();
-    
-    //start adding specific gameplay variables here.
-    this.breakfastType = NO_BREAKFAST;
+
     
     //Start adding functions
+    this.setStats = function() {
+    	this.curState = "Start";
+    	this.curInteraction = null;
+    	this.lastClicked = -1;
+    	this.gameOver = false;
+        anxiety = STARTING_ANXIETY;
+        stress = STARTING_STRESS;
+        twelveHourClock = true;
+        time = {
+        		hour : START_HOUR,
+        		minute : START_MINUTE, 
+        		am : ""
+        };
+        
+        //start adding specific gameplay variables here.
+        this.breakfastType = NO_BREAKFAST;
+    };
+    
+    this.setStats();
     
     /**
      * Get an object that holds the current time. 
@@ -199,6 +206,7 @@ function GameStats() {
     this.resetLastClicked = function() {
     	lastClicked = 0;
     };
+
 }
 
 

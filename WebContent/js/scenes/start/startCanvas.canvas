@@ -29,7 +29,8 @@
             "x": 1500,
             "y": 100,
             "anchor.x": 0.5,
-            "anchor.y": 0.5
+            "anchor.y": 0.5,
+            "callback": "notImplemented"
           }
         },
         {
