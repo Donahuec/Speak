@@ -25,14 +25,17 @@ Preload.prototype.preload = function() {
 	this.game.state.add("Start", Start);
 	this.game.state.add("Alarm", Alarm);
 	this.game.state.add("GameOver", GameOver);
+	this.game.state.add("Bedroom", Bedroom);
 	
 
 	// Here we load the rest of the assets our game needs.
 	this.load.pack("start", "assets/assets-pack.json");
 	this.load.pack("alarm", "assets/assets-pack.json");
+	this.load.pack("bedroom", "assets/assets-pack.json");
 	this.load.pack("HUD", "assets/assets-pack.json");
 	this.load.pack("gameOver", "assets/assets-pack.json");
 	this.load.pack("gameData", "assets/assets-pack.json");
+	
 };
 
 Preload.prototype.create = function() {

@@ -31,7 +31,7 @@ Alarm.prototype.update = function() {
 	StoryState.prototype.update.call(this);
 	//Get up Button is clicked
 	if (this.interactionReturn === this.GET_UP) {
-		this.game.state.start("GameOver");
+		this.game.state.start("Bedroom");
 	}
 	//display alarm clock text with just numbers, no AM or PM
 	this.scene.alarmTime.text = this.game.stats.getTimeString().slice(0, 5);

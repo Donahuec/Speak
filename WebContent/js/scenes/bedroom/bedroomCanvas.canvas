@@ -1,0 +1,72 @@
+{
+  "settings": {
+    "sceneWidth": 1920,
+    "sceneHeight": 1080,
+    "generateOnSave": true,
+    "enableStepping": false
+  },
+  "world": {
+    "type": "group",
+    "id": "46a4aaeb-7f17-4401-85b0-0981565a1b1b",
+    "info": {
+      "editorName": "bedroomCanvas",
+      "children": [
+        {
+          "type": "image",
+          "id": "df0a88ae-0741-4bbb-ae81-84accd0bd1eb",
+          "asset": "0",
+          "info": {"editorName": "bedroom_bg"}
+        },
+        {
+          "type": "button",
+          "id": "956c418c-bc5a-4c45-948b-eb4ade982484",
+          "asset": "1",
+          "info": {
+            "editorName": "door",
+            "editorPublic": true,
+            "x": 1775,
+            "y": 409,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5,
+            "animations": [
+              {
+                "name": "open",
+                "frameRate": 6,
+                "frames": [
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ]
+              },
+              {
+                "name": "close",
+                "frameRate": 6,
+                "frames": [
+                  "3",
+                  "2",
+                  "1",
+                  "0"
+                ]
+              }
+            ],
+            "callback": "this.goToLivingroom"
+          }
+        }
+      ]
+    }
+  },
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "bedroom",
+      "asset": "bedroom_bg"
+    },
+    "1": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "bedroom",
+      "asset": "door",
+      "sprite": "0"
+    }
+  }
+}

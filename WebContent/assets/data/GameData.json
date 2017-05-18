@@ -7,6 +7,7 @@
 			"options" : {
 				"option" : {
 					"index" : 0,
+					"enabled" : true,
 					"title" : "",
 					"description" : "",
 					"time" : {
@@ -37,6 +38,7 @@
 			"options" : { 
 				"getUp" : {
 					"index" : 0,
+					"enabled" : true,
 					"title" : "Get Up",
 					"description" : "Get out of bed, shower, and get dressed.(30 minutes)",
 					"time" : {
@@ -58,6 +60,7 @@
 				},
 				"snooze" : {
 					"index" : 1,
+					"enabled" : true,
 					"title" : "Snooze The Alarm",
 					"description" : "Snooze your alarm. It takes 50 minutes to walk to work, and 20 to ride the bus, given you don't run into any obstacles today. You should definitely eat breakfast before work today, you can feel your stomach growling... but if you could just sleep for a few more minutes maybe you'll feel a bit more rested... (15 minutes)",
 					"time" : {
@@ -80,6 +83,10 @@
 				}
 			}
 		}
-	}
+	},
+	"bedroom" : {
+        "description" : "Your bedroom. Though the warmth of your sheets is tempting, you should probably get ready for work.",
+        "doorDescription" : "Go to the living room."   
+    }
 
 }

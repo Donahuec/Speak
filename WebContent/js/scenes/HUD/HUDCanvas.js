@@ -210,6 +210,8 @@ function HUDCanvas(aGame, aParent) {
 				if (toActivate == true){
 					optionButtons[i].scale.setTo(1);
 					optionButtons[i].reset(optionButtons[i].x, optionButtons[i].y);
+				} else {
+					optionText[i].Text = "";
 				}
 			}
 		}

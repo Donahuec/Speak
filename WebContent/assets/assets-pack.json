@@ -40,6 +40,11 @@
             "key": "loading",
             "url": "assets/preload/loading.png",
             "overwrite": false
+        },
+        {
+            "type": "script",
+            "key": "Bedroom",
+            "url": "js/scenes/bedroom/Bedroom.js"
         }
     ],
     "HUD": [
@@ -95,8 +100,31 @@
             "url": "js/GameStats.js"
         }
     ],
+    "bedroom": [
+        {
+            "type": "image",
+            "key": "bedroom_bg",
+            "url": "assets/images/bedroom/bedroom_bg.png",
+            "overwrite": false
+        },
+        {
+            "type": "spritesheet",
+            "key": "door",
+            "url": "assets/images/bedroom/door.png",
+            "frameWidth": 290,
+            "frameHeight": 819,
+            "frameMax": -1,
+            "margin": 0,
+            "spacing": 0
+        },
+        {
+            "type": "script",
+            "key": "bedroomCanvas",
+            "url": "js/scenes/bedroom/bedroomCanvas.js"
+        }
+    ],
     "meta": {
-        "generated": "1494486282800",
+        "generated": "1495078718969",
         "app": "Phaser Editor",
         "url": "http://phasereditor.boniatillo.com",
         "version": "1.0",
