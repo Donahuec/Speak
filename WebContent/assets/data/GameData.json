@@ -2,6 +2,7 @@
 	"template" : {
 		"description" : "",
 		"Interaction" : {
+			"click" : "",
 			"description" : "",
 			"limit" : -1,
 			"options" : {
@@ -34,6 +35,7 @@
 	"alarm" : {
 		"description" : "You open your eyes slowly. Your alarm is blaring. You have work at 9:00. You blink a few times, trying to clear the fog of sleep from your brain. The nightmares are still lingering. You should get up so you can eat breakfast, and then get to work. If you sleep too late you'll have to take the bus, which is always an unpleasant experience, but sleep is tugging on your brain...",
 		"alarmGoesOff" : {
+			"click" : "",
 			"description" : "You open your eyes slowly. Your alarm is blaring. You have work at 9:00. You blink a few times, trying to clear the fog of sleep from your brain. The nightmares are still lingering. You should get up so you can eat breakfast, and then get to work. If you sleep too late you'll have to take the bus, which is always an unpleasant experience, but sleep is tugging on your brain...",
 			"options" : { 
 				"getUp" : {
@@ -87,6 +89,241 @@
 	"bedroom" : {
         "description" : "Your bedroom. Though the warmth of your sheets is tempting, you should probably get ready for work.",
         "doorDescription" : "Go to the living room."   
-    }
+    },
+    "livingroom" : {
+		"description" : "Your living room.",
+		"toBedroomDescription" : "Go to your bedroom.",
+		"hallway" : {
+			"click" : "A hallway to your kitchen and the exit.",
+			"description" : "You can go to your kitchen to get breakfast or leave for work.",
+			"limit" : -1,
+			"options" : {
+				"kitchen" : {
+					"index" : 0,
+					"enabled" : true,
+					"title" : "Go to the Kitchen",
+					"description" : "Head to your kitchen and make sure you eat a good breakfast.",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 0,
+						"hourLimit" : 0,
+						"minuteLimit" : 0,
+						"timeOut" : ""
+					},
+					"anxiety" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					},
+					"stress" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					}
+				},
+			"bus" : {
+					"index" : 1,
+					"enabled" : true,
+					"title" : "Take the Bus to Work",
+					"description" : "You hate taking the bus. It always stresses you out, but it's much faster, and you can't be late to work. (20 minutes)",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 0,
+						"hourLimit" : 8,
+						"minuteLimit" : 10,
+						"timeOut" : ""
+					},
+					"anxiety" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					},
+					"stress" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					}
+				},
+			"walk" : {
+					"index" : 2,
+					"enabled" : true,
+					"title" : "Walk to Work",
+					"description" : "Walk to work. This is significantly less stressful than the bus, but takes much longer. (50 minutes)",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 0,
+						"hourLimit" : 0,
+						"minuteLimit" : 0,
+						"timeOut" : ""
+					},
+					"anxiety" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					},
+					"stress" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					}
+				}
+			}
+		}	
+	},
+	"kitchen" : {
+		"description" : "Your Kitchen.",
+		"hallway" : {
+			"click" : "A hallway to your living room and the exit.",
+			"description" : "Return to the living room, or leave your apartment.",
+			"limit" : -1,
+			"options" : {
+				"livingroom" : {
+					"index" : 0,
+					"enabled" : true,
+					"title" : "Return to the living room",
+					"description" : "Go back to your living room",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 0,
+						"hourLimit" : 0,
+						"minuteLimit" : 0,
+						"timeOut" : ""
+					},
+					"anxiety" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					},
+					"stress" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					}
+				},
+				"bus" : {
+					"index" : 1,
+					"enabled" : true,
+					"title" : "Take the bus to woek",
+					"description" : "you hate taking the bus. It always stresses you out, but it is much faster, and you can't be late to work. (20 minutes)",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 0,
+						"hourLimit" : 0,
+						"minuteLimit" : 0,
+						"timeOut" : ""
+					},
+					"anxiety" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					},
+					"stress" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					}
+				},
+				"walk" : {
+					"index" : 2,
+					"enabled" : true,
+					"title" : "",
+					"description" : "",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 0,
+						"hourLimit" : 8,
+						"minuteLimit" : 10,
+						"timeOut" : ""
+					},
+					"anxiety" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					},
+					"stress" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					}
+				}
+			}
+		},
+		"fridge" : {
+			"click" : "Look in the fridge for something to eat.",
+			"description" : "You open up the fridge. You have a few options to choose from, and you know that eating well now will be a good start to your day.",
+			"limit" : -1,
+			"options" : {
+				"small" : {
+					"index" : 0,
+					"enabled" : true,
+					"title" : "Grab some fruit",
+					"description" : "Grab some fruit for breakfast. It's fast and easy, but you'll probably be hungry later.",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 0,
+						"hourLimit" : 0,
+						"minuteLimit" : 0,
+						"timeOut" : ""
+					},
+					"anxiety" : {
+						"change" : 0,
+						"min" : -10,
+						"max" : 10
+					},
+					"stress" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					}
+				},
+				"medium" : {
+					"index" : 1,
+					"enabled" : true,
+					"title" : "Make a sandwich",
+					"description" : "Sit down for a peanut butter sandwich and toast. Maybe you'll have a glass of milk with that. (10 minutes)",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 10,
+						"hourLimit" : 8,
+						"minuteLimit" : 30,
+						"timeOut" : ""
+					},
+					"anxiety" : {
+						"change" : -10,
+						"min" : -15,
+						"max" : 0
+					},
+					"stress" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					}
+				},
+				"large" : {
+					"index" : 2,
+					"enabled" : true,
+					"title" : "Cook a nice breakfast",
+					"description" : "If you've got the time, why not make a big breakfast? Pancakes, eggs, maybe some bacon? You can feel your mouth watering already, and it will definitely leave you feeling great. (30 minutes)",
+					"time" : {
+						"hoursTaken" : 0,
+						"minutesTaken" : 30,
+						"hourLimit" : 8,
+						"minuteLimit" : 10,
+						"timeOut" : ""
+					},
+					"anxiety" : {
+						"change" : -20,
+						"min" : -25,
+						"max" : -15
+					},
+					"stress" : {
+						"change" : 0,
+						"min" : 0,
+						"max" : 0
+					}
+				}
+			}
+		}	
+	}
 
 }

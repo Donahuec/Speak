@@ -36,8 +36,7 @@ function buttonScale() {
 			} else {
 				this.button.returnDescription = this.description.text;
 				this.description.text = this.button.data.description;
-			}
-			
+			}			
 		}
 	}
 }
