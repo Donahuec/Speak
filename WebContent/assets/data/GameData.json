@@ -90,7 +90,7 @@
         "description" : "Your bedroom. Though the warmth of your sheets is tempting, you should probably get ready for work.",
         "doorDescription" : "Go to the living room."   
     },
-    "livingroom" : {
+    "livingRoom" : {
 		"description" : "Your living room.",
 		"toBedroomDescription" : "Go to your bedroom.",
 		"hallway" : {
@@ -129,8 +129,8 @@
 					"time" : {
 						"hoursTaken" : 0,
 						"minutesTaken" : 0,
-						"hourLimit" : 8,
-						"minuteLimit" : 10,
+						"hourLimit" : 0,
+						"minuteLimit" : 0,
 						"timeOut" : ""
 					},
 					"anxiety" : {
@@ -152,8 +152,8 @@
 					"time" : {
 						"hoursTaken" : 0,
 						"minutesTaken" : 0,
-						"hourLimit" : 0,
-						"minuteLimit" : 0,
+						"hourLimit" : 8,
+						"minuteLimit" : 10,
 						"timeOut" : ""
 					},
 					"anxiety" : {
@@ -203,7 +203,7 @@
 				"bus" : {
 					"index" : 1,
 					"enabled" : true,
-					"title" : "Take the bus to woek",
+					"title" : "Take the bus to work",
 					"description" : "you hate taking the bus. It always stresses you out, but it is much faster, and you can't be late to work. (20 minutes)",
 					"time" : {
 						"hoursTaken" : 0,
@@ -226,9 +226,9 @@
 				"walk" : {
 					"index" : 2,
 					"enabled" : true,
-					"title" : "",
-					"description" : "",
-					"time" : {
+					"title" : "Walk to Work",
+                    "description" : "Walk to work. This is significantly less stressful than the bus, but takes much longer. (50 minutes)",
+                    "time" : {
 						"hoursTaken" : 0,
 						"minutesTaken" : 0,
 						"hourLimit" : 8,

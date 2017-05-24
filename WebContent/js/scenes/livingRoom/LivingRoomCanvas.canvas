@@ -1,0 +1,145 @@
+{
+  "settings": {
+    "sceneWidth": 1920,
+    "sceneHeight": 1080,
+    "generateOnSave": true,
+    "enableStepping": false
+  },
+  "world": {
+    "type": "group",
+    "id": "361ea100-3ec0-479b-bda5-a045e24371b9",
+    "info": {
+      "editorName": "livingRoomCanvas",
+      "children": [
+        {
+          "type": "image",
+          "id": "bb2011cb-f5b8-412c-84ee-0f88117497fa",
+          "asset": "0",
+          "info": {"editorName": "livingRoom_bg"}
+        },
+        {
+          "type": "button",
+          "id": "492fd91a-7142-48aa-99f5-8ccd6656f78c",
+          "asset": "1",
+          "info": {
+            "editorName": "bedroomDoor",
+            "editorPublic": true,
+            "x": 57,
+            "y": 74,
+            "animations": [
+              {
+                "name": "open",
+                "frameRate": 6,
+                "frames": [
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ]
+              },
+              {
+                "name": "close",
+                "frameRate": 6,
+                "frames": [
+                  "3",
+                  "2",
+                  "1",
+                  "0"
+                ]
+              }
+            ],
+            "callback": "this.goToBedroom"
+          }
+        },
+        {
+          "type": "button",
+          "id": "3e335967-cf8b-4739-b1b3-2d4fbe5a9523",
+          "asset": "2",
+          "info": {
+            "editorName": "kitchenDoor",
+            "editorPublic": true,
+            "x": 1597,
+            "y": 71,
+            "animations": [
+              {
+                "name": "open",
+                "frameRate": 6,
+                "frames": [
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ]
+              },
+              {
+                "name": "close",
+                "frameRate": 6,
+                "frames": [
+                  "3",
+                  "2",
+                  "1",
+                  "0"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "atlas-sprite",
+          "id": "1b7d97ef-f2f0-4ebe-87d0-9121354feb66",
+          "asset": "3",
+          "info": {
+            "editorName": "livingroom_laundry",
+            "x": 305,
+            "y": 574,
+            "scale.x": 0.44427519648011843,
+            "scale.y": 0.38828797369705675
+          }
+        },
+        {
+          "type": "atlas-sprite",
+          "id": "be29e1c0-7d87-40e0-af8e-1f0a36e02ff4",
+          "asset": "4",
+          "info": {
+            "editorName": "livingroom_bills",
+            "x": 635,
+            "y": 773,
+            "scale.x": 0.4055681486839246,
+            "scale.y": 0.3364479590406657
+          }
+        }
+      ]
+    }
+  },
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "livingRoom",
+      "asset": "livingRoom_bg"
+    },
+    "1": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "livingRoom",
+      "asset": "bedroomDoor",
+      "sprite": "0"
+    },
+    "2": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "livingRoom",
+      "asset": "kitchenDoor",
+      "sprite": "0"
+    },
+    "3": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "home",
+      "asset": "homeAtlas",
+      "sprite": "livingroom_laundry"
+    },
+    "4": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "home",
+      "asset": "homeAtlas",
+      "sprite": "livingroom_bills"
+    }
+  }
+}

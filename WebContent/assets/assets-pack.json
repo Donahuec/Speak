@@ -45,6 +45,16 @@
             "type": "script",
             "key": "Bedroom",
             "url": "js/scenes/bedroom/Bedroom.js"
+        },
+        {
+            "type": "script",
+            "key": "LivingRoom",
+            "url": "js/scenes/livingRoom/LivingRoom.js"
+        },
+        {
+            "type": "script",
+            "key": "Kitchen",
+            "url": "js/scenes/kitchen/Kitchen.js"
         }
     ],
     "HUD": [
@@ -123,8 +133,71 @@
             "url": "js/scenes/bedroom/bedroomCanvas.js"
         }
     ],
+    "livingRoom": [
+        {
+            "type": "image",
+            "key": "livingRoom_bg",
+            "url": "assets/images/livingRoom/livingroom_bg.png",
+            "overwrite": false
+        },
+        {
+            "type": "spritesheet",
+            "key": "bedroomDoor",
+            "url": "assets/images/livingRoom/bedroomDoor.png",
+            "frameWidth": 257,
+            "frameHeight": 895,
+            "frameMax": -1,
+            "margin": 0,
+            "spacing": 0
+        },
+        {
+            "type": "spritesheet",
+            "key": "kitchenDoor",
+            "url": "assets/images/livingRoom/kitchenDoor.png",
+            "frameWidth": 257,
+            "frameHeight": 895,
+            "frameMax": -1,
+            "margin": 0,
+            "spacing": 0
+        },
+        {
+            "type": "script",
+            "key": "LivingRoomCanvas",
+            "url": "js/scenes/livingRoom/LivingRoomCanvas.js"
+        }
+    ],
+    "home": [{
+        "type": "atlas",
+        "key": "homeAtlas",
+        "textureURL": "assets/images/atlasFiles/homeAtlas.png",
+        "atlasURL": "assets/images/atlasFiles/homeAtlas.json",
+        "format": "TEXTURE_ATLAS_JSON_HASH"
+    }],
+    "kitchen": [
+        {
+            "type": "spritesheet",
+            "key": "fridge",
+            "url": "assets/images/kitchen/fridge.png",
+            "frameWidth": 478,
+            "frameHeight": 869,
+            "frameMax": -1,
+            "margin": 0,
+            "spacing": 0
+        },
+        {
+            "type": "image",
+            "key": "kitchen_bg",
+            "url": "assets/images/kitchen/kitchen_bg.png",
+            "overwrite": false
+        },
+        {
+            "type": "script",
+            "key": "KitchenCanvas",
+            "url": "js/scenes/kitchen/KitchenCanvas.js"
+        }
+    ],
     "meta": {
-        "generated": "1495078718969",
+        "generated": "1495605346906",
         "app": "Phaser Editor",
         "url": "http://phasereditor.boniatillo.com",
         "version": "1.0",

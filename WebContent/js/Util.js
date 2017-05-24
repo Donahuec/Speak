@@ -11,10 +11,10 @@ var START_HOUR = 7;
 var START_MINUTE = 20;
 var AM = "AM";
 var PM = "PM";
-var NO_BREAKFAST = 0;
-var SMALL_BREAKFAST = 1;
-var MEDIUM_BREAKFAST = 2;
-var LARGE_BREAKFAST = 3;
+var NO_BREAKFAST = -1;
+var SMALL_BREAKFAST = 0;
+var MEDIUM_BREAKFAST = 1;
+var LARGE_BREAKFAST = 2;
 var PAST = -1;
 var CURRENT = 0;
 var FUTURE = 1;
@@ -57,4 +57,22 @@ function notImplemented() {
 	console.log("feature not implemented");
 	window.alert("This feature has not yet been implemented!");
 }
+
+
+/**
+ * Gets passed a context with the door sprite, description, and HUD
+ */
+function openDoor() {
+	this.HUD.fDescription.text = this.description;
+	this.door.play("open");
+	
+};
+
+/**
+ * Gets passed a context with the door sprite,description, and HUD
+ */
+function closeDoor() {
+	this.HUD.fDescription.text = this.description;
+	this.door.play("close");
+};
 

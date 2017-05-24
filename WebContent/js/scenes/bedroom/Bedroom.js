@@ -17,19 +17,12 @@ Bedroom.prototype.create = function() {
 	this.setStateData(this.game.data.bedroom);
 	StoryState.prototype.create.call(this);
 	
-	this.openDoor = function() {
-		this.HUD.fDescription.text = this.game.data.bedroom.doorDescription;
-		this.scene.fDoor.play("open");
-		
-	};
-	
-	this.closeDoor = function() {
-		this.HUD.fDescription.text = this.game.data.bedroom.description;
-		this.scene.fDoor.play("close");
-	};
-	
-	this.scene.fDoor.onInputOver.add(this.openDoor, this);
-	this.scene.fDoor.onInputOut.add(this.closeDoor, this);
+	this.scene.fDoor.onInputOver.add(openDoor, 
+			{HUD : this.HUD, door : this.scene.fDoor,
+				description : this.game.data.bedroom.doorDescription});
+	this.scene.fDoor.onInputOut.add(closeDoor, 
+			{HUD : this.HUD, door : this.scene.fDoor, 
+				description : this.game.data.bedroom.description});
 };
 
 Bedroom.prototype.update = function() {

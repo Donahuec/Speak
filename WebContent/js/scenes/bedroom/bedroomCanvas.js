@@ -11,7 +11,7 @@ function bedroomCanvas(aGame, aParent) {
 	/* --- pre-init-begin --- */
 
 	this.goToLivingroom = function() {
-		this.game.state.start("GameOver");
+		this.game.state.start("LivingRoom");
 	};
 
 	/* --- pre-init-end --- */

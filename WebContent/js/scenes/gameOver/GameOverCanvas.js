@@ -51,7 +51,8 @@ GameOverCanvas.prototype.constructor = Phaser.Group;
  */
 function restartGame() {
 	this.game.stats.setStats();
-	this.game.state.start("Start");
+	//TODO figure out how to restart the game to reset all variables.
+	this.game.state.start("Preload");
 }
 
 /**

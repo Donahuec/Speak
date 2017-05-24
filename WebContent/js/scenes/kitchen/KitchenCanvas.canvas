@@ -1,0 +1,128 @@
+{
+  "settings": {
+    "sceneWidth": 1920,
+    "sceneHeight": 1080,
+    "generateOnSave": true,
+    "enableStepping": false
+  },
+  "world": {
+    "type": "group",
+    "id": "4f28f6a3-f91b-433f-a431-a915b754f66d",
+    "info": {
+      "editorName": "KitchenCanvas",
+      "children": [
+        {
+          "type": "image",
+          "id": "dec5558f-f650-4530-becb-18f719f6ed08",
+          "asset": "0",
+          "info": {"editorName": "kitchen_bg"}
+        },
+        {
+          "type": "atlas-sprite",
+          "id": "ab9b4d1d-05a8-4833-8155-ebb87d96dff2",
+          "asset": "1",
+          "info": {
+            "editorName": "kitchen_dishes",
+            "x": 1030,
+            "y": 378,
+            "scale.x": 0.4442752627926752,
+            "scale.y": 0.5396607959482412
+          }
+        },
+        {
+          "type": "button",
+          "id": "1db375c2-121e-42d3-bf8a-dcdfda0811fd",
+          "asset": "2",
+          "info": {
+            "editorName": "fridge",
+            "editorPublic": true,
+            "x": 1442,
+            "y": 104,
+            "animations": [
+              {
+                "name": "open",
+                "frameRate": 6,
+                "frames": [
+                  "0",
+                  "1",
+                  "2",
+                  "4"
+                ]
+              },
+              {
+                "name": "close",
+                "frameRate": 6,
+                "frames": [
+                  "4",
+                  "2",
+                  "1",
+                  "0"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "button",
+          "id": "3534137a-2eaf-4dc6-a28b-55f1172408db",
+          "asset": "3",
+          "info": {
+            "editorName": "hallwayDoor",
+            "editorPublic": true,
+            "x": 42,
+            "y": -42,
+            "scale.x": 1.1258682644930587,
+            "scale.y": 1.2585629919047612,
+            "animations": [
+              {
+                "name": "open",
+                "frameRate": 6,
+                "frames": [
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ]
+              },
+              {
+                "name": "close",
+                "frameRate": 6,
+                "frames": [
+                  "3",
+                  "2",
+                  "1",
+                  "0"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "kitchen",
+      "asset": "kitchen_bg"
+    },
+    "1": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "home",
+      "asset": "homeAtlas",
+      "sprite": "kitchen_dishes"
+    },
+    "2": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "kitchen",
+      "asset": "fridge",
+      "sprite": "0"
+    },
+    "3": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "livingRoom",
+      "asset": "bedroomDoor",
+      "sprite": "0"
+    }
+  }
+}

@@ -30,7 +30,7 @@ Alarm.prototype.create = function() {
 Alarm.prototype.update = function() {
 	StoryState.prototype.update.call(this);
 	//Get up Button is clicked
-	if (this.interactionReturn === this.GET_UP) {
+	if (this.interactionReturn.clicked == this.GET_UP) {
 		this.game.state.start("Bedroom");
 	}
 	//display alarm clock text with just numbers, no AM or PM

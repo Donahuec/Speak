@@ -65,22 +65,23 @@ StoryState.prototype.init = function() {
 	this.handleInteraction = function() {
 		//if nothing has been clicked, return -1
 		if (this.game.stats.getLastClicked() === -1) {
-			return -1;
+			return { clicked : -1, interaction : null};
 		}
 
 		//update information based ogg of choice
-		var returnValue = this.game.stats.getLastClicked();
+		var lastClicked = this.game.stats.getLastClicked();
+		var interaction = this.game.stats.getCurInteraction();
 		this.handleChoice.call(this);
 		this.clearInteraction.call(this);
-		return returnValue;
+		return {clicked : lastClicked, interaction : interaction};
 	};
-	
 };
 
 StoryState.prototype.create = function() {
 	this.game.stats.setCurState(this.key);
 	this.HUD = new HUDCanvas(this.game);
-	this.HUD.fDescription.text = this.data.description;		
+	this.HUD.fDescription.text = this.data.description;	
+	
 };
 
 StoryState.prototype.update = function() {

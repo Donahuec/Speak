@@ -51,25 +51,25 @@ function HUDCanvas(aGame, aParent) {
 		"index" : 1
 		};
 
-	var option1 = this.game.add.button(960, 350, 'HUDAtlas', optionClick, { game : this.game, index : 1 }, null, 'option', null, null, options);
+	var option1 = this.game.add.button(960, 250, 'HUDAtlas', optionClick, { game : this.game, index : 1 }, null, 'option', null, null, options);
 	option1.anchor.setTo(0.5, 0.5);
 	option1.data = {
 		"index" : 2
 		};
 
-	var option2 = this.game.add.button(960, 450, 'HUDAtlas', optionClick, { game : this.game, index : 2 }, null, 'option', null, null, options);
+	var option2 = this.game.add.button(960, 250, 'HUDAtlas', optionClick, { game : this.game, index : 2 }, null, 'option', null, null, options);
 	option2.anchor.setTo(0.5, 0.5);
 	option2.data = {
 		"index" : 3
 		};
 
-	var option3 = this.game.add.button(960, 550, 'HUDAtlas', optionClick, { game : this.game, index : 3 }, null, 'option', null, null, options);
+	var option3 = this.game.add.button(960, 250, 'HUDAtlas', optionClick, { game : this.game, index : 3 }, null, 'option', null, null, options);
 	option3.anchor.setTo(0.5, 0.5);
 	option3.data = {
 		"index" : 4
 		};
 
-	var option4 = this.game.add.button(960, 650, 'HUDAtlas', optionClick, { game : this.game, index : 4 }, null, 'option', null, null, options);
+	var option4 = this.game.add.button(960, 250, 'HUDAtlas', optionClick, { game : this.game, index : 4 }, null, 'option', null, null, options);
 	option4.anchor.setTo(0.5, 0.5);
 	option4.data = {
 		"index" : 5
@@ -88,6 +88,8 @@ function HUDCanvas(aGame, aParent) {
 	this.fOption4 = option4;
 
 	/* --- post-init-begin --- */
+	//default y position for buttons
+	this.defaultY = option0.y;
 
 	//set status bars tp default values
 	stressFill.scale.setTo((this.game.stats.getStress() / MAX_STRESS)
@@ -195,6 +197,8 @@ function HUDCanvas(aGame, aParent) {
 		}
 	};
 
+	
+	
 	/**
 	 * Make options visible or not. Do not display an option 
 	 * if it is an empty string
@@ -202,6 +206,8 @@ function HUDCanvas(aGame, aParent) {
 	 * @param toActivate true to make options visible, false to remove them
 	 */
 	this.activateOptions = function(toActivate) {
+		var currentY = this.defaultY;
+		
 		for (var i = 0; i < 5; i++) {
 			if (optionText[i].text) {
 				optionText[i].visible = toActivate;
@@ -210,8 +216,18 @@ function HUDCanvas(aGame, aParent) {
 				if (toActivate == true){
 					optionButtons[i].scale.setTo(1);
 					optionButtons[i].reset(optionButtons[i].x, optionButtons[i].y);
+					
+					//dynamically place the buttons with pretty tween
+					tween = this.game.add.tween(optionButtons[i]).to( { y: currentY },
+							200, Phaser.Easing.Cubic.Out, true);
+					tween = this.game.add.tween(optionText[i]).to( { y: currentY },
+							200, Phaser.Easing.Cubic.Out, true);
+					currentY += 100;
+					
 				} else {
 					optionText[i].Text = "";
+					optionButtons[i].y = this.defaultY;
+					optionText[i].y = this.defaultY;
 				}
 			}
 		}
