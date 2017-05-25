@@ -20,8 +20,8 @@ function KitchenCanvas(aGame, aParent) {
 	kitchen_dishes.scale.setTo(0.4442752627926752, 0.5396607959482412);
 
 	var fridge = this.game.add.button(1442, 104, 'fridge', null, this, null, 0, null, null, this);
-	fridge.animations.add('open', [0, 1, 2, 4], 6, false);
-	fridge.animations.add('close', [4, 2, 1, 0], 6, false);
+	fridge.animations.add('open', [0, 1, 2, 3], 6, false);
+	fridge.animations.add('close', [3, 2, 1, 0], 6, false);
 
 	var hallwayDoor = this.game.add.button(42, -42, 'bedroomDoor', null, this, null, 0, null, null, this);
 	hallwayDoor.scale.setTo(1.1258682644930587, 1.2585629919047612);
