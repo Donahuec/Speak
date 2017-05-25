@@ -185,7 +185,7 @@
             "url": "assets/images/kitchen/fridge.png",
             "frameWidth": 478,
             "frameHeight": 869,
-            "frameMax": -1,
+            "frameMax": 6,
             "margin": 0,
             "spacing": 0
         },
@@ -215,7 +215,7 @@
         }
     ],
     "meta": {
-        "generated": "1495684061428",
+        "generated": "1495686720535",
         "app": "Phaser Editor",
         "url": "http://phasereditor.boniatillo.com",
         "version": "1.0",
