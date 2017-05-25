@@ -26,23 +26,23 @@ LivingRoom.prototype.create = function() {
 	//set up bedroom door animation
 	this.scene.fBedroomDoor.onInputOver.add(openDoor, 
 			{HUD : this.HUD, door : this.scene.fBedroomDoor,
-				description : this.game.data.livingRoom.toBedroomDescription});
+				description : this.data.toBedroomDescription});
 	this.scene.fBedroomDoor.onInputOut.add(closeDoor, 
 			{HUD : this.HUD, door : this.scene.fBedroomDoor, 
-				description : this.game.data.livingRoom.description});
+				description : this.data.description});
 	
 	//set up hallway/kitchen door animation
 	this.scene.fKitchenDoor.onInputOver.add(openDoor, 
 			{HUD : this.HUD, door : this.scene.fKitchenDoor,
-				description : this.game.data.livingRoom.hallway.click});
+				description : this.data.hallway.click});
 	this.scene.fKitchenDoor.onInputOut.add(closeDoor, 
 			{HUD : this.HUD, door : this.scene.fKitchenDoor, 
-				description : this.game.data.livingRoom.description});
+				description : this.data.description});
 	
 	//Set up hallway door click interaction
 	this.scene.fKitchenDoor.onInputDown.add(startInteractionClick,
 			{HUD : this.HUD, game : this.game, 
-			interaction : this.game.data.livingRoom.hallway});	
+			interaction : this.data.hallway});	
 	
 };
 
@@ -50,7 +50,9 @@ LivingRoom.prototype.update = function() {
 	StoryState.prototype.update.call(this);
 	if (this.interactionReturn.clicked === 0) {
 		this.game.state.start("Kitchen");
-	} else if (this.interactionReturn.interaction === this.game.data.livingRoom.hallway){
+	}else if (this.interactionReturn.clicked === 1){
+		this.game.state.start("BusStop");		
+	} else if (this.interactionReturn.interaction === this.data.hallway){
 		this.game.state.start("GameOver");		
 	}
 };

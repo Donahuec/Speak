@@ -2,7 +2,10 @@
   "files": [
     "/Speak/Design/images/livingroom/livingroom_bills.png",
     "/Speak/Design/images/livingroom/livingroom_laundry.png",
-    "/Speak/Design/images/kitchen/kitchen_dishes.png"
+    "/Speak/Design/images/kitchen/kitchen_dishes.png",
+    "/Speak/Design/images/busentrance/toll_1.png",
+    "/Speak/Design/images/busentrance/busWindow.png",
+    "/Speak/Design/images/busentrance/busWindowFrame.png"
   ],
   "settings": {
     "pot": false,

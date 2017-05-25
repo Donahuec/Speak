@@ -1,11 +1,71 @@
 {
   "frames": {
+    "busWindow": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 233,
+        "y": 27,
+        "w": 100,
+        "h": 100
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 100
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 100
+      }
+    },
+    "busWindowFrame": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 880,
+        "y": 242,
+        "w": 25,
+        "h": 25
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 25,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 25,
+        "h": 25
+      }
+    },
+    "toll_1": {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 129,
+        "w": 511,
+        "h": 639
+      },
+      "spriteSourceSize": {
+        "x": 61,
+        "y": 0,
+        "w": 511,
+        "h": 639
+      },
+      "sourceSize": {
+        "w": 581,
+        "h": 758
+      }
+    },
     "kitchen_dishes": {
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 414,
-        "y": 281,
+        "x": 515,
+        "y": 47,
         "w": 363,
         "h": 220
       },
@@ -24,8 +84,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 414,
-        "y": 154,
+        "x": 2,
+        "y": 2,
         "w": 229,
         "h": 125
       },
@@ -44,8 +104,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 2,
-        "y": 2,
+        "x": 515,
+        "y": 269,
         "w": 410,
         "h": 499
       },

@@ -1,0 +1,157 @@
+{
+  "settings": {
+    "sceneWidth": 1920,
+    "sceneHeight": 1080,
+    "generateOnSave": true,
+    "enableStepping": false
+  },
+  "world": {
+    "type": "group",
+    "id": "79a23bc8-5b0a-499e-ad38-388df572ca96",
+    "info": {
+      "editorName": "BusStopCanvas",
+      "children": [
+        {
+          "type": "image",
+          "id": "48b57d5d-8784-4343-829e-b4e153712395",
+          "asset": "0",
+          "info": {"editorName": "busentrance_bg"}
+        },
+        {
+          "type": "button",
+          "id": "b3826e35-40fc-4b3a-ad62-45a60fd1b455",
+          "asset": "1",
+          "info": {
+            "editorName": "toll",
+            "editorPublic": true,
+            "x": 1440,
+            "y": 832,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5
+          }
+        },
+        {
+          "type": "group",
+          "id": "b41c1fd2-b625-4ffb-a5fb-7efe89a1ced8",
+          "info": {
+            "editorName": "leftDoor",
+            "children": [
+              {
+                "type": "tileSprite",
+                "id": "bbfe0d5b-64fe-4da1-8189-0600c0ff809f",
+                "asset": "2",
+                "info": {
+                  "editorName": "busWindow1",
+                  "scale.x": 9.659352808001968,
+                  "scale.y": 10.880704367494536,
+                  "width": 100,
+                  "height": 100
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "aad8a6b7-dbbf-4788-a4fd-b278d5c979c0",
+                "asset": "3",
+                "info": {
+                  "editorName": "busWindowFrame1",
+                  "x": 936,
+                  "y": -2,
+                  "scale.y": 43.439972207727806,
+                  "width": 25,
+                  "height": 25
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "group",
+          "id": "3b200aa7-f781-4158-a5ab-93373686b685",
+          "info": {
+            "editorName": "rightDoor",
+            "children": [
+              {
+                "type": "tileSprite",
+                "id": "0236dcff-8e62-4eb2-a612-0419c6a326f0",
+                "asset": "2",
+                "info": {
+                  "editorName": "busWindow",
+                  "x": 960,
+                  "scale.x": 9.659352808001968,
+                  "scale.y": 10.880704367494536,
+                  "width": 100,
+                  "height": 100
+                }
+              },
+              {
+                "type": "tileSprite",
+                "id": "a9dd927a-4de6-4a43-8229-a5ce9df747a9",
+                "asset": "3",
+                "info": {
+                  "editorName": "busWindowFrame",
+                  "x": 960,
+                  "scale.y": 43.439972207727806,
+                  "width": 25,
+                  "height": 25
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "tileSprite",
+          "id": "bc06c985-d704-432e-8fed-face1adb18ae",
+          "asset": "3",
+          "info": {
+            "editorName": "busEdge2",
+            "x": 1730,
+            "y": -1,
+            "scale.x": 8.487998341797368,
+            "scale.y": 43.620207279593714,
+            "width": 25,
+            "height": 25
+          }
+        },
+        {
+          "type": "tileSprite",
+          "id": "d9a5ca5a-8ce6-44e4-a655-d0e0c4c96c2d",
+          "asset": "3",
+          "info": {
+            "editorName": "busEdge1",
+            "x": -17,
+            "y": -5,
+            "scale.x": 8.487998341797368,
+            "scale.y": 43.620207279593714,
+            "width": 25,
+            "height": 25
+          }
+        }
+      ]
+    }
+  },
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "busStop",
+      "asset": "busentrance_bg"
+    },
+    "1": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "home",
+      "asset": "homeAtlas",
+      "sprite": "toll_1"
+    },
+    "2": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "home",
+      "asset": "homeAtlas",
+      "sprite": "busWindow"
+    },
+    "3": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "home",
+      "asset": "homeAtlas",
+      "sprite": "busWindowFrame"
+    }
+  }
+}

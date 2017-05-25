@@ -28,6 +28,7 @@ Preload.prototype.preload = function() {
 	this.game.state.add("Bedroom", Bedroom);
 	this.game.state.add("LivingRoom", LivingRoom);
 	this.game.state.add("Kitchen", Kitchen);
+	this.game.state.add("BusStop", BusStop);
 	
 
 	// Here we load the rest of the assets our game needs.
@@ -40,7 +41,7 @@ Preload.prototype.preload = function() {
 	this.load.pack("livingRoom", "assets/assets-pack.json");
 	this.load.pack("home", "assets/assets-pack.json");
 	this.load.pack("kitchen", "assets/assets-pack.json");
-	
+	this.load.pack("busStop", "assets/assets-pack.json");	
 };
 
 Preload.prototype.create = function() {

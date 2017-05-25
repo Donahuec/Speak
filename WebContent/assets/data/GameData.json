@@ -5,6 +5,7 @@
 			"click" : "",
 			"description" : "",
 			"limit" : -1,
+			"enabled" : true,
 			"options" : {
 				"option" : {
 					"index" : 0,
@@ -37,6 +38,7 @@
 		"alarmGoesOff" : {
 			"click" : "",
 			"description" : "You open your eyes slowly. Your alarm is blaring. You have work at 9:00. You blink a few times, trying to clear the fog of sleep from your brain. The nightmares are still lingering. You should get up so you can eat breakfast, and then get to work. If you sleep too late you'll have to take the bus, which is always an unpleasant experience, but sleep is tugging on your brain...",
+			"enabled" : true,
 			"options" : { 
 				"getUp" : {
 					"index" : 0,
@@ -97,6 +99,7 @@
 			"click" : "A hallway to your kitchen and the exit.",
 			"description" : "You can go to your kitchen to get breakfast or leave for work.",
 			"limit" : -1,
+			"enabled" : true,
 			"options" : {
 				"kitchen" : {
 					"index" : 0,
@@ -176,6 +179,7 @@
 			"click" : "A hallway to your living room and the exit.",
 			"description" : "Return to the living room, or leave your apartment.",
 			"limit" : -1,
+			"enabled" : true,
 			"options" : {
 				"livingroom" : {
 					"index" : 0,
@@ -252,6 +256,7 @@
 			"click" : "Look in the fridge for something to eat.",
 			"description" : "You open up the fridge. You have a few options to choose from, and you know that eating well now will be a good start to your day.",
 			"limit" : -1,
+			"enabled" : true,
 			"options" : {
 				"small" : {
 					"index" : 0,
@@ -324,6 +329,147 @@
 				}
 			}
 		}	
-	}
-
+	},
+	"busStop" : {
+        "description" : "The bus door wheezes as it opens. You hesitate as you enter. The bus is pretty full today. You spot an empty section a few rows down, but the likelyhood that someone will sit next to you is high.",
+        "toll" : {
+            "click" : "Go up to pay the toll",
+            "description" : "You hesitate as you enter. The bus is pretty full today. You spot an empty section a few rows down, but the likelyhood that someone will sit next to you is high.",
+            "limit" : 3,
+            "enabled" : true,
+            "options" : {
+                "pay" : {
+                    "index" : 0,
+                    "enabled" : true,
+                    "title" : "Get on the Bus",
+                    "description" : "Pay the bus toll, and get on the crowded bus",
+                    "time" : {
+                        "hoursTaken" : 0,
+                        "minutesTaken" : 0,
+                        "hourLimit" : 0,
+                        "minuteLimit" : 0,
+                        "timeOut" : ""
+                    },
+                    "anxiety" : {
+                        "change" : 5,
+                        "min" : 0,
+                        "max" : 10
+                    },
+                    "stress" : {
+                        "change" : 0,
+                        "min" : 0,
+                        "max" : 0
+                    }
+                },
+                "wait" : {
+                    "index" : 1,
+                    "enabled" : true,
+                    "title" : "Wait for the Next Bus (10 minutes)",
+                    "description" : "Another bus comes in ten minutes, and it usually has less people on it. You could wait and avoid the crowd.",
+                    "time" : {
+                        "hoursTaken" : 0,
+                        "minutesTaken" : 0,
+                        "hourLimit" : 8,
+                        "minuteLimit" : 30,
+                        "timeOut" : "You wish you could walk or wait for another bus, so that you could avoid the crowded mess that is this bus, but you can't afford to be late for work either."
+                    },
+                    "anxiety" : {
+                        "change" : 0,
+                        "min" : 0,
+                        "max" : 0
+                    },
+                    "stress" : {
+                        "change" : 0,
+                        "min" : 0,
+                        "max" : 0
+                    }
+                },
+                "walk" : {
+                    "index" : 2,
+                    "enabled" : true,
+                    "title" : "Walk to Work Instead",
+                    "description" : "You have the time, and you could avoid the crowds all together by walking to work.",
+                    "time" : {
+                        "hoursTaken" : 0,
+                        "minutesTaken" : 0,
+                        "hourLimit" : 8,
+                        "minuteLimit" : 10,
+                        "timeOut" : ""
+                    },
+                    "anxiety" : {
+                        "change" : -15,
+                        "min" : -20,
+                        "max" : -10
+                    },
+                    "stress" : {
+                        "change" : 0,
+                        "min" : -5,
+                        "max" : 0
+                    }
+                }
+            }
+        },
+        "panic" : {
+            "click" : "",
+            "description" : "You panic. Your hands begin to sweat. The bus driver glances at you, an annoyed look on his face. \"Well, are you getting on?\" he grumbles at you. You nod quickly, and pay the toll before stumbling to you seat. you can feel yourself shaking.",
+            "limit" : -1,
+            "enabled" : true,
+            "options" : {
+                "option" : {
+                    "index" : 0,
+                    "enabled" : true,
+                    "title" : "Continue",
+                    "description" : "",
+                    "time" : {
+                        "hoursTaken" : 0,
+                        "minutesTaken" : 0,
+                        "hourLimit" : 0,
+                        "minuteLimit" : 0,
+                        "timeOut" : ""
+                    },
+                    "anxiety" : {
+                        "change" : 30,
+                        "min" : 20,
+                        "max" : 40
+                    },
+                    "stress" : {
+                        "change" : 10,
+                        "min" : 5,
+                        "max" : 15
+                    }
+                }
+            }
+        },
+        "didWait" : {
+            "click" : "",
+            "description" : "You wait for the next bus. It takes 10 minutes for the bus to ride, then another 20 to get to work. The bus ride is uneventful.",
+            "limit" : -1,
+            "enabled" : true,
+            "options" : {
+                "option" : {
+                    "index" : 0,
+                    "enabled" : true,
+                    "title" : "Continue",
+                    "description" : "",
+                    "time" : {
+                        "hoursTaken" : 0,
+                        "minutesTaken" : 30,
+                        "hourLimit" : 0,
+                        "minuteLimit" : 0,
+                        "timeOut" : ""
+                    },
+                    "anxiety" : {
+                        "change" : -10,
+                        "min" : -15,
+                        "max" : -5
+                    },
+                    "stress" : {
+                        "change" : 0,
+                        "min" : 0,
+                        "max" : 0
+                    }
+                }
+            }
+        }   
+    }
 }

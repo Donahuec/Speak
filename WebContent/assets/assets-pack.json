@@ -55,6 +55,11 @@
             "type": "script",
             "key": "Kitchen",
             "url": "js/scenes/kitchen/Kitchen.js"
+        },
+        {
+            "type": "script",
+            "key": "BusStop",
+            "url": "js/scenes/busStop/BusStop.js"
         }
     ],
     "HUD": [
@@ -196,8 +201,21 @@
             "url": "js/scenes/kitchen/KitchenCanvas.js"
         }
     ],
+    "busStop": [
+        {
+            "type": "image",
+            "key": "busentrance_bg",
+            "url": "assets/images/busStop/busentrance_bg.png",
+            "overwrite": false
+        },
+        {
+            "type": "script",
+            "key": "BusStopCanvas",
+            "url": "js/scenes/busStop/BusStopCanvas.js"
+        }
+    ],
     "meta": {
-        "generated": "1495605346906",
+        "generated": "1495684061428",
         "app": "Phaser Editor",
         "url": "http://phasereditor.boniatillo.com",
         "version": "1.0",
