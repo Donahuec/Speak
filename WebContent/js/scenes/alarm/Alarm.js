@@ -21,10 +21,7 @@ Alarm.prototype.create = function() {
 	this.setStateData(this.game.data.alarm);
 	
 	StoryState.prototype.create.call(this);
-	
-	this.scene.fAlarm_bg.onInputDown.add(startInteractionClick,
-			{HUD : this.HUD, game : this.game, 
-			interaction : this.data.alarmGoesOff});	
+	this.scene.fAlarm_bg.onInputDown.add(this.startInteraction, this, 0, this.data.alarmGoesOff);	
 };
 
 Alarm.prototype.update = function() {

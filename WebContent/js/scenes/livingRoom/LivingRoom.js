@@ -40,9 +40,7 @@ LivingRoom.prototype.create = function() {
 				description : this.data.description});
 	
 	//Set up hallway door click interaction
-	this.scene.fKitchenDoor.onInputDown.add(startInteractionClick,
-			{HUD : this.HUD, game : this.game, 
-			interaction : this.data.hallway});	
+	this.scene.fKitchenDoor.onInputDown.add(this.startInteraction, this, 0, this.data.hallway);	
 	
 };
 

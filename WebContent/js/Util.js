@@ -18,6 +18,7 @@ var LARGE_BREAKFAST = 2;
 var PAST = -1;
 var CURRENT = 0;
 var FUTURE = 1;
+var PANIC = 6;
 
 
 /**
@@ -28,7 +29,6 @@ var FUTURE = 1;
  * To be used for button callbacks
  */
 function buttonScale() {
-	this.button.scale.setTo(this.scale, this.scale);
 	if (this.option) {
 		if (this.button.data.description) {
 			if (this.scale == 1) {
@@ -38,17 +38,13 @@ function buttonScale() {
 				this.description.text = this.button.data.description;
 			}			
 		}
+	} else {
+		if (this.button.game.stats.getCurInteraction() != null) return;
 	}
+	
+	this.button.scale.setTo(this.scale, this.scale);
 }
 
-/**
- * Takes a context that includes HUD, the game, and the interaction
- *  that you want to activate
- *  Button Callback that activates an interaction
- */
-function startInteractionClick() {
-	StoryState.prototype.startInteraction.call(this, this.interaction);
-}
 
 /**
  * An alert pop-up for when a feature is not yet implemented
@@ -63,6 +59,7 @@ function notImplemented() {
  * Gets passed a context with the door sprite, description, and HUD
  */
 function openDoor() {
+	if (this.door.game.stats.getCurInteraction() != null) return;
 	this.HUD.fDescription.text = this.description;
 	this.door.play("open");
 	
@@ -72,6 +69,7 @@ function openDoor() {
  * Gets passed a context with the door sprite,description, and HUD
  */
 function closeDoor() {
+	if (this.door.game.stats.getCurInteraction() != null) return;
 	this.HUD.fDescription.text = this.description;
 	this.door.play("close");
 };

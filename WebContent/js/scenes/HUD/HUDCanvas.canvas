@@ -3,7 +3,7 @@
     "sceneWidth": 1920,
     "sceneHeight": 1080,
     "generateOnSave": true,
-    "enableStepping": true,
+    "enableStepping": false,
     "stepWidth": 10,
     "stepHeight": 50
   },
@@ -216,6 +216,21 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "type": "tileSprite",
+          "id": "fa20b7f7-f16d-4396-bc00-ae4ed5f5d18f",
+          "asset": "5",
+          "info": {
+            "editorName": "timer",
+            "editorPublic": true,
+            "x": 659,
+            "y": 167,
+            "scale.x": 598.1065810998632,
+            "tint": "0xff0000",
+            "width": 1,
+            "height": 15
           }
         }
       ]

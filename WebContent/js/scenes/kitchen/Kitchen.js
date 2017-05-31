@@ -31,9 +31,7 @@ Kitchen.prototype.create = function() {
 			{HUD : this.HUD, door : this.scene.fHallwayDoor, 
 				description : this.data.description});
 	//Set up hallway door click interaction
-	this.scene.fHallwayDoor.onInputDown.add(startInteractionClick,
-			{HUD : this.HUD, game : this.game, 
-			interaction : this.data.hallway});	
+	this.scene.fHallwayDoor.onInputDown.add(this.startInteraction, this, 0, this.data.hallway);	
 	
 	
 	if (this.game.data.kitchen.fridge.enabled !== false) {
@@ -45,9 +43,7 @@ Kitchen.prototype.create = function() {
 				{HUD : this.HUD, door : this.scene.fFridge, 
 					description : this.data.description});
 		//Set up fridge door click interaction
-		this.scene.fFridge.onInputDown.add(startInteractionClick,
-				{HUD : this.HUD, game : this.game, 
-				interaction : this.data.fridge});	
+		this.scene.fFridge.onInputDown.add(this.startInteraction, this, 0, this.data.fridge);	
 	}
 };
 

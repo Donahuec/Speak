@@ -14,6 +14,7 @@ StoryState.prototype = proto;
 StoryState.prototype.constructor = StoryState;
 
 StoryState.prototype.init = function() {
+
 	/**
 	 * sets/creats a data propert that holds the json data for the current state
 	 * @param data object from json data that representst the current state
@@ -32,13 +33,13 @@ StoryState.prototype.init = function() {
 			if (options[option].index === this.game.stats.getLastClicked()) {
 				//update anxiety
 				this.game.stats.updateAnxiety(options[option].anxiety);
-				this.add.tween(this.HUD.fAnxietyFill.scale).to( 
+				this.game.add.tween(this.HUD.fAnxietyFill.scale).to( 
 						{x : (this.game.stats.getAnxiety() / MAX_ANXIETY)
 							* this.HUD.fAnxietyFill.data.maxScale }, 300, null, true);
 				
 				//update stress
 				this.game.stats.updateStress(options[option].stress);
-				this.add.tween(this.HUD.fStressFill.scale).to( 
+				this.game.add.tween(this.HUD.fStressFill.scale).to( 
 						{x : (this.game.stats.getStress() / MAX_STRESS)
 							* this.HUD.fStressFill.data.maxScale }, 300, null, true);
 				
@@ -54,7 +55,6 @@ StoryState.prototype.init = function() {
 		this.game.stats.setCurInteraction(null);
 		this.game.stats.resetLastClicked();
 		this.HUD.activateOptions(false);
-		
 	};
 
 	/**
@@ -67,20 +67,34 @@ StoryState.prototype.init = function() {
 		if (this.game.stats.getLastClicked() === -1) {
 			return { clicked : -1, interaction : null};
 		}
-
-		//update information based ogg of choice
+		
+		// clear the timer if there is one
+		if (this.timer != null) {
+			this.game.time.events.remove(this.timer);
+			this.timer = null;
+		}
+		
+		this.HUD.activateTimer(false);
+		//update information based off of choice
 		var lastClicked = this.game.stats.getLastClicked();
 		var interaction = this.game.stats.getCurInteraction();
-		this.handleChoice.call(this);
+		//if you did not panic, handle the interaction
+		//panicing is generally handled in a secondary interaction
+		if (lastClicked != 6) {
+			this.handleChoice.call(this);
+		}
 		this.clearInteraction.call(this);
 		return {clicked : lastClicked, interaction : interaction};
 	};
+	
+	
 };
 
 StoryState.prototype.create = function() {
 	this.game.stats.setCurState(this.key);
 	this.HUD = new HUDCanvas(this.game);
 	this.HUD.fDescription.text = this.data.description;	
+	this.timer = null;
 	
 };
 
@@ -89,15 +103,29 @@ StoryState.prototype.update = function() {
 };
 
 /**
- * Deisplay interaction choices
+ * Display interaction choices
+ * @param button default parameter passed by button handlers
+ * @param pointer default parameter passed by button handlers
  * @param interaction json data for the interaction to display
  */
-StoryState.prototype.startInteraction = function(interaction) {
+StoryState.prototype.startInteraction = function(button, pointer, interaction) {
+	if (this.game.stats.getCurInteraction() != null) return;
 	this.game.stats.setCurInteraction(interaction);
 	this.HUD.setInteractionText(interaction);
 	this.HUD.activateOptions(true);
+	if (interaction.limit != -1) {
+		this.timer = this.game.time.events.add(Phaser.Timer.SECOND * interaction.limit,
+				timeOut, this);
+		this.HUD.activateTimer(true, interaction.limit);
+	}
 };
 
+/** 
+ * Handles Timer end
+ */
+function timeOut() {
+	this.game.stats.setLastClicked(PANIC);
+}
 
 
 

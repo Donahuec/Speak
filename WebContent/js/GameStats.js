@@ -180,6 +180,18 @@ function GameStats() {
         } 
     };
     
+    /**
+     * Given a possibility of panicing, determines whether or not to panic
+     * @param chance number between 0 and 1 that determines the possibility of panicing
+     * @return whether or not to panic
+     */
+    this.determinePanic = function(chance) {
+    	var randomValue = random.realInRange(0, 1);
+    	var anxietyValue =  (anxiety / (MAX_ANXIETY / 2.5));
+    	if (randomValue * anxietyValue >= 1 - chance) return true;
+    	return false;
+    };  
+    
     //getters and setters
     
     /**

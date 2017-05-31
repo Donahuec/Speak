@@ -75,6 +75,10 @@ function HUDCanvas(aGame, aParent) {
 		"index" : 5
 		};
 
+	var timer = this.game.add.tileSprite(659, 167, 1, 15, 'HUDAtlas', 'barFill', this);
+	timer.scale.setTo(598.1065810998632, 1.0);
+	timer.tint = 0xff0000;
+
 	 // public fields
 
 	this.fFooter = footer;
@@ -86,10 +90,15 @@ function HUDCanvas(aGame, aParent) {
 	this.fOption2 = option2;
 	this.fOption3 = option3;
 	this.fOption4 = option4;
+	this.fTimer = timer;
 
 	/* --- post-init-begin --- */
 	//default y position for buttons
 	this.defaultY = option0.y;
+	var defaultTimerWidth = timer.scale.x;
+	
+	timer.visible = false;
+	
 
 	//set status bars tp default values
 	stressFill.scale.setTo((this.game.stats.getStress() / MAX_STRESS)
@@ -206,9 +215,11 @@ function HUDCanvas(aGame, aParent) {
 	 * @param toActivate true to make options visible, false to remove them
 	 */
 	this.activateOptions = function(toActivate) {
+		
 		var currentY = this.defaultY;
 		
 		for (var i = 0; i < 5; i++) {
+			
 			if (optionText[i].text) {
 				optionText[i].visible = toActivate;
 				optionButtons[i].visible = toActivate;
@@ -225,12 +236,33 @@ function HUDCanvas(aGame, aParent) {
 					currentY += 100;
 					
 				} else {
-					optionText[i].Text = "";
+					optionText[i].text = "";
 					optionButtons[i].y = this.defaultY;
 					optionText[i].y = this.defaultY;
 				}
 			}
 		}
+	};
+	
+	//variable to hold the tween for the timer
+	this.timerTween = null;
+	
+	/**
+	 * Activates or deactivates the timer bar
+	 * @param activate whether or not to activate the timer
+	 * @param time time in seconds for the timer bar to count down
+	 */
+	this.activateTimer = function(activate, time) {
+		if (activate === true) {
+			timer.visible = true;
+			this.timerTween = this.game.add.tween(timer.scale).to( 
+					{x : 0 }, Phaser.Timer.SECOND *  time, null, true);
+		} else if (this.timerTween != null) {
+			this.timerTween.stop();
+			this.timerTween = null;
+			timer.scale.setTo(defaultTimerWidth, 1.0);
+			timer.visible = false;
+		} 
 	};
 
 	/* --- post-init-end --- */
